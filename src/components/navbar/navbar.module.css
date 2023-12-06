@@ -1,0 +1,137 @@
+/* Css for Navbar  */
+
+
+.nav {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  bottom:0;
+  width: 200px;
+  height: 500px;
+  z-index: 100;
+  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09);
+  
+}
+
+.inner-nav {
+  position: absolute;
+  top: 10rem;
+  bottom: 0; 
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 1%;
+  /* set background shadow */
+  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09);
+}
+
+button.toggle {
+
+  background-color: var(--primary-color);
+  color: #F0F0F0;
+  z-index: 101;
+  position: fixed;
+  outline: 0;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  top: 8rem;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+nav .inner-nav ul {
+  padding: 0;
+  position: relative;
+  top: 100px;
+  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0,0.2);
+}
+
+nav .inner-nav ul li {
+  list-style: none;
+  cursor: pointer;
+  line-height: 3;
+  padding: 0 25px;
+  border-bottom: 1px solid rgba(0, 0, 0,0.2);
+}
+
+nav .inner-nav li a {
+  font-size: 25px;
+  color: #F0F0F0;
+  text-decoration: none;
+ /*  transition: 1s all ease-in-out; */
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+
+nav .inner-nav li a:hover {
+  color: #459E2E;
+}
+
+/* Css for vectors */
+
+
+.vectorGreen {
+  margin-top: 10%;
+  margin-left: 40%;
+  width: 600px;
+  height: 600px;
+}
+.vectorPurple {
+  margin-top: 10%;
+  margin-left: 40%;
+  width: 600px;
+  height: 600px;
+  display: none;
+}
+
+.vectorComponent {
+  fill:none;stroke:#94a8d6
+}
+
+.vector:hover {
+  fill:none;
+stroke:var(--accent-color);
+}
+
+.vectorComponent:hover {
+fill:none;
+stroke:var(--accent-color);
+
+}
+
+/* Css for Logo ijac */
+
+/* CSS for mobile devices */
+@media only screen and (max-width:768px){
+  .nav {
+    width: 150px;   
+  }
+  button.toggle {
+    right: 1px;
+    top: 105px;
+  }
+
+  .inner-nav {
+    height: 85vh;
+  }
+
+}
+
+/* Media Query for Tablet */
+
+@media only screen and (min-width: 767px) and (max-width: 1023px){
+
+
+button.toggle {
+  display: block;
+  right: 2%;
+  top: 165px;
+} 
+
+}

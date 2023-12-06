@@ -1,0 +1,180 @@
+/* Custom font for Contacto*/
+@font-face {
+  font-family: "45 Light";
+  src: url("../../../public/assets/fonts/HelveticaNeueLTStd45Light.otf");
+}
+
+/* ------------------- CSS for Contact's Page ----------------------------*/
+
+.container__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 80vh;
+}
+.container__text__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0 auto;
+  justify-content: center;
+  margin-bottom: auto;
+  /* set container text to the center of the page */
+}
+
+.container__title {
+  margin-left: 120px;
+  margin-right: auto;
+  margin-top: 150px;
+
+}
+
+.section__title {
+  font-family: '45 Light';
+  font-style: 'Normal';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 56px;
+  text-align: right;  
+  color: #6C6B6B;
+  } 
+
+.container__text__contact__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  color: #6C6B6B;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 24px;
+  text-align: justify;
+  font-family: "45 Light";
+  width: 630px;
+
+}
+
+.container__text__contact__description {
+margin-left:auto;
+margin-right:auto;
+font-style: normal;
+width: 630px;
+font-weight: 300;
+font-size: 17px;
+line-height: 20px;
+text-align: justify;
+margin-top: 100px;
+margin-bottom: 70px;
+font-family: "45 Light";
+}
+/* Css for Contacto's Icons */
+
+.mailIcon {
+  color: var(--white);
+  width: 70.67px;
+  height: 53px;
+}
+
+.mailIcon:hover  {
+  color: #6abd45;
+}
+
+.whatsAppIcon {
+  color: var(--white);
+  width: 52.58px;
+  height: 52.83px;
+  margin-right: 35px;
+  padding-top: 3px;
+}
+
+.whatsAppIcon:hover {
+  color: #6abd45;
+}
+
+.container__text__icons {
+margin-left: auto;
+margin-right: auto;
+height: 70px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 768px) {
+  .container__contact {
+    margin-top: 40px;
+  }
+
+  .container__text__contact__description {
+    width: 355px;
+  }
+
+  .container__text__contact__title{
+    font-size: 15px;
+  }
+
+  .container__text__contact__description {
+margin-top: 60px;
+margin-bottom: 70px;
+font-size: 15px;
+  }
+
+  .mailIcon {
+    color: var(--white);
+    width: 55.67px;
+    height: 38px;
+  }
+  
+  .whatsAppIcon {
+    color: var(--white);
+    width: 35.58px;
+    height: 35.83px;
+    margin-right: 30px;
+  }
+
+
+}
+
+/* Media Query for Tablet */
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+  .container__contact {
+    margin-top: 60px;
+    width: 70%;
+    margin-left: 14%;
+    margin-right: auto;
+  }
+
+  .container__text__contact__title{
+    font-size: 20px;
+    margin-top: 200px;
+  }
+
+  .container__text__contact__description{
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+
+  .mailIcon {
+    color: var(--white);
+    width: 65.67px;
+    height: 48px;
+  }
+  
+  .whatsAppIcon {
+    color: var(--white);
+    width: 45.58px;
+    height: 45.83px;
+    margin-right: 35px;
+  }
+
+}
+
+/* Media Query for some Notebooks */
+@media only screen and (min-width: 1024px) and (max-width:1300px) {
+  .container__text__contact__description {
+    margin-top: 60px;
+  }
+}

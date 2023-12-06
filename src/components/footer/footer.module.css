@@ -1,0 +1,15 @@
+.container {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.containerText {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
