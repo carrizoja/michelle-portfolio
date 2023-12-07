@@ -1,32 +1,32 @@
 /* Css for Navbar  */
 
-
 .nav {
   position: fixed;
-  top: 100px;
+  top: 0;
   right: 0;
-  bottom:0;
-  width: 200px;
-  height: 500px;
+  /* bottom:0; */
+  width: 300px;
+  height: 100vh;
   z-index: 100;
-  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09);
-  
+  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09); 
+  /* add transparency 100% */
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.inner-nav {
+.innerNav {
   position: absolute;
   top: 10rem;
   bottom: 0; 
   width: 100%;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   border-radius: 1%;
   /* set background shadow */
-  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09);
+  /* box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09); */
 }
 
 button.toggle {
 
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); 
   color: #F0F0F0;
   z-index: 101;
   position: fixed;
@@ -36,7 +36,7 @@ button.toggle {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none; 
-  top: 8rem;
+  top: 4rem;
   right: 35px;
   width: 50px;
   height: 50px;
@@ -44,68 +44,36 @@ button.toggle {
   cursor: pointer;
 }
 
-nav .inner-nav ul {
+nav .innerNav ul {
   padding: 0;
   position: relative;
-  top: 100px;
+ /*  top: 100px; */
   margin: 0;
-  border-top: 1px solid rgba(0, 0, 0,0.2);
+ /*  border-top: 1px solid rgba(0, 0, 0,0.2); */
 }
 
-nav .inner-nav ul li {
+nav .innerNav ul li {
   list-style: none;
   cursor: pointer;
   line-height: 3;
   padding: 0 25px;
-  border-bottom: 1px solid rgba(0, 0, 0,0.2);
+  /* border-bottom: 1px solid rgba(0, 0, 0,0.2); */
 }
 
-nav .inner-nav li a {
-  font-size: 25px;
-  color: #F0F0F0;
+nav .innerNav li a {
+  font-size: 30px;
+  font-weight: bold;
+  color: #6C6B6B;
   text-decoration: none;
  /*  transition: 1s all ease-in-out; */
   font-family: 'Helvetica Neue', sans-serif;
 }
 
 
-nav .inner-nav li a:hover {
+nav .innerNav li a:hover {
   color: #459E2E;
 }
 
-/* Css for vectors */
-
-
-.vectorGreen {
-  margin-top: 10%;
-  margin-left: 40%;
-  width: 600px;
-  height: 600px;
-}
-.vectorPurple {
-  margin-top: 10%;
-  margin-left: 40%;
-  width: 600px;
-  height: 600px;
-  display: none;
-}
-
-.vectorComponent {
-  fill:none;stroke:#94a8d6
-}
-
-.vector:hover {
-  fill:none;
-stroke:var(--accent-color);
-}
-
-.vectorComponent:hover {
-fill:none;
-stroke:var(--accent-color);
-
-}
-
-/* Css for Logo ijac */
 
 /* CSS for mobile devices */
 @media only screen and (max-width:768px){
@@ -117,7 +85,7 @@ stroke:var(--accent-color);
     top: 105px;
   }
 
-  .inner-nav {
+  .innerNav {
     height: 85vh;
   }
 

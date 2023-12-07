@@ -21,7 +21,7 @@ const Navbar = () => {
         variants={variants}
         transition={{ duration: 0.3 }}
       >
-        <motion.div className="inner-bar">
+        <motion.div className={styles.innerNav}>
           <ul id="navlinks">
             <motion.li >
               <Link href="/about"
