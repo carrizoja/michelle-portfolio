@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 80vh;
 }
 .container__text__about {
   display: flex;

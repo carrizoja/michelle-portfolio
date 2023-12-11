@@ -18,8 +18,8 @@
 
 :root {
   --foreground-rgb: #E6E5E4;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: #E6E5E4;
+  --background-end-rgb: #E6E5E4;
 }
 
 

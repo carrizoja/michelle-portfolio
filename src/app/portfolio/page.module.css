@@ -1,0 +1,22 @@
+.container__portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container__title {
+  margin-left: 120px;
+  margin-right: auto;
+  margin-top: 150px;
+
+}
+
+.section__title {
+  font-family: '45 Light';
+  font-style: 'Normal';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 56px;
+  text-align: right;  
+  color: #6C6B6B;
+  } 

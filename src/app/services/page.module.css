@@ -1,0 +1,50 @@
+/* Custom font for Contacto*/
+@font-face {
+  font-family: "45 Light";
+  src: url("../../../public/assets/fonts/HelveticaNeueLTStd45Light.otf");
+}
+
+/* ------------------- CSS for Contact's Page ----------------------------*/
+
+.container__services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container__text__services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0 auto;
+  justify-content: center;
+  margin-bottom: auto;
+  /* set container text to the center of the page */
+}
+
+.container__listServices {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  margin:0 auto;
+  justify-content: center;
+  margin-bottom: auto;
+  gap: 30px;
+}
+
+.container__title {
+  margin-left: 120px;
+  margin-right: auto;
+  margin-top: 150px;
+
+}
+
+.section__title {
+  font-family: '45 Light';
+  font-style: 'Normal';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 56px;
+  text-align: right;  
+  color: #6C6B6B;
+  } 
