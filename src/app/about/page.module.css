@@ -1,7 +1,8 @@
 /* Custom font for Contacto*/
+
 @font-face {
-  font-family: "45 Light";
-  src: url("../../../public/assets/fonts/HelveticaNeueLTStd45Light.otf");
+  font-family: "Helvetica Bold";
+  src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
 }
 
 /* ------------------- CSS for Contact's Page ----------------------------*/
@@ -29,13 +30,13 @@
 }
 
 .section__title {
-  font-family: '45 Light';
-  font-style: 'Normal';
+  font-family: 'Helvetica Bold';
   font-weight: 500;
   font-size: 30px;
   line-height: 56px;
   text-align: right;  
   color: #6C6B6B;
+  opacity: 0.5;
   } 
 
 .container__text__about__title {

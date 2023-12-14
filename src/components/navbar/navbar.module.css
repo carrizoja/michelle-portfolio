@@ -1,16 +1,22 @@
-/* Css for Navbar  */
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+}
+
+/* ------------------- CSS for Navbar ----------------------------*/
 
 .nav {
   position: fixed;
   top: 0;
   right: 0;
   /* bottom:0; */
-  width: 300px;
+  /* width: 300px; */
+  width: 100%;
   height: 100vh;
   z-index: 100;
   box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09); 
   /* add transparency 100% */
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .innerNav {
@@ -18,6 +24,7 @@
   top: 10rem;
   bottom: 0; 
   width: 100%;
+  text-align: end;
   /* background-color: var(--primary-color); */
   border-radius: 1%;
   /* set background shadow */
@@ -25,13 +32,12 @@
 }
 
 button.toggle {
-
-  background-color: var(--primary-color); 
-  color: #F0F0F0;
+  background-color: #F5F5F5;
+  color: #F5F5F5;
   z-index: 101;
   position: fixed;
   outline: 0;
-  border: none;
+  border-radius: 50%;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -42,6 +48,12 @@ button.toggle {
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.closeIcon {
+  color: #6C6B6B;
 }
 
 nav .innerNav ul {
@@ -62,11 +74,10 @@ nav .innerNav ul li {
 
 nav .innerNav li a {
   font-size: 30px;
-  font-weight: bold;
+  font-family: "Helvetica Bold";
   color: #6C6B6B;
+  /* opacity: 0.5; */
   text-decoration: none;
- /*  transition: 1s all ease-in-out; */
-  font-family: 'Helvetica Neue', sans-serif;
 }
 
 

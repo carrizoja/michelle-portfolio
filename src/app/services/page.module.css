@@ -1,7 +1,11 @@
-/* Custom font for Contacto*/
 @font-face {
-  font-family: "45 Light";
-  src: url("../../../public/assets/fonts/HelveticaNeueLTStd45Light.otf");
+  font-family: "Helvetica Bold";
+  src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Regular";
+  src: url("../../../public/assets/fonts//helveticaRegular/helveticaRegular.otf");
 }
 
 /* ------------------- CSS for Contact's Page ----------------------------*/
@@ -11,11 +15,12 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
 .container__text__services {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:0 auto;
+  margin: 0 auto;
   justify-content: center;
   margin-bottom: auto;
   /* set container text to the center of the page */
@@ -26,7 +31,7 @@
   flex-direction: column;
   width: 60%;
   align-items: center;
-  margin:0 auto;
+  margin: 0 auto;
   justify-content: center;
   margin-bottom: auto;
   gap: 30px;
@@ -40,11 +45,29 @@
 }
 
 .section__title {
-  font-family: '45 Light';
-  font-style: 'Normal';
+  font-family: 'Helvetica Bold';
   font-weight: 500;
   font-size: 30px;
   line-height: 56px;
-  text-align: right;  
+  text-align: right;
   color: #6C6B6B;
-  } 
+  opacity: 0.5;
+}
+
+.service_title {
+  font-family: 'Helvetica Regular';
+  color: #6C6B6B;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.service_description {
+  color: #6C6B6B;
+  text-align: justify;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

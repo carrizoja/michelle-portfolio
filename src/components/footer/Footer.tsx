@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <div className={styles.container}>    
       <div className={styles.containerText}>
-        <p>All rights reserved.</p>
-        <p>Michelle Mugrabi</p>
+        <p className={styles.textAllRightsReserved}>ALL RIGHTS RESERVED</p>
+        <p className={styles.textName}>MICHELLE MUGRABI</p>
       </div>
     </div>
   )

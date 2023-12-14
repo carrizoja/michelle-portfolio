@@ -1,3 +1,6 @@
 .mainBackground {
-  background-color:aqua;
+  background-position: center;
+  object-fit: cover;
+  width: 100vw;
+  height:85vh;
 }

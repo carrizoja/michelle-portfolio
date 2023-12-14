@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "@/app/about/page.module.css";
 
+
 const About = () => {
   return (
     <section className={styles.container__about}>
       <div className={styles.container__title}>
-        <h1 className={styles.section__title}>ABOUT ME</h1>
+        <h1 className={styles.section__title} >ABOUT ME</h1>
       </div>
       <div className={styles.container__text__about}>
         <p className={styles.container__text__about__description}>

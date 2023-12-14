@@ -18,8 +18,8 @@ const Services = async () => {
           {data.map((service: any) => (
             <div key={service.id} className={styles.container__service}>
               <div className={styles.service__item}>
-                <h2>{service.service_title}</h2>
-                <p>{service.service_description}</p>
+                <h2 className={styles.service_title}>{service.service_title}</h2>
+                <p className={styles.service_description}>{service.service_description}</p>
               </div>
             </div>
           ))}

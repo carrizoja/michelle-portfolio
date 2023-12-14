@@ -32,7 +32,7 @@ const Navbar = () => {
                   behavior: "smooth",
                 });
                 }}
-               >ABOUT ME</Link>
+               >ABOUT</Link>
             </motion.li>
             <motion.li >
               <Link href ="/services"
@@ -78,7 +78,7 @@ const Navbar = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        {show ? <CloseIcon /> : <MenuIcon />}
+        {show ? <CloseIcon className={styles.closeIcon} /> : <MenuIcon />}
 
       </motion.button>
    
