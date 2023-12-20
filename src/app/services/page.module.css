@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: "Helvetica Regular";
-  src: url("../../../public/assets/fonts//helveticaRegular/helveticaRegular.otf");
+  font-family: "Hind Regular";
+  src: url("../../../public/assets/fonts/Hind/Hind-Regular.ttf");
 }
 
 /* ------------------- CSS for Contact's Page ----------------------------*/
@@ -61,6 +61,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 10px;
 }
 
 .service_description {
@@ -70,4 +71,5 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  font-family: 'Hind Regular';
 }

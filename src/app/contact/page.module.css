@@ -3,6 +3,11 @@
   src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
 }
 
+@font-face {
+  font-family: "Hind Regular";
+  src: url("../../../public/assets/fonts/Hind/Hind-Regular.ttf");
+}
+
 /* ------------------- CSS for Contact's Page ----------------------------*/
 
 .container__contact {
@@ -47,7 +52,7 @@
   font-size: 25px;
   line-height: 24px;
   text-align: justify;
-  font-family: "45 Light";
+  font-family: "Hind Regular";
   width: 630px;
 
 }
@@ -63,7 +68,7 @@ line-height: 20px;
 text-align: justify;
 margin-top: 100px;
 margin-bottom: 70px;
-font-family: "45 Light";
+font-family: "Hind Regular";
 }
 /* Css for Contacto's Icons */
 

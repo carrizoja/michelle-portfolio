@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className={styles.container__about}>
       <div className={styles.container__title}>
-        <h1 className={styles.section__title} >ABOUT ME</h1>
+        <h1 className={styles.section__title} >ABOUT</h1>
       </div>
       <div className={styles.container__text__about}>
         <p className={styles.container__text__about__description}>
@@ -20,9 +20,9 @@ const About = () => {
           projects, brands, interfaces adhering to design systems with a strong
           sense of aesthetics.
         </p>
-        <h2 className={styles.container__text__about__title}>
+        <p className={styles.container__text__about__title}>
           Eager to delve deeper into my philosophy? Read my manifesto
-        </h2>
+        </p>
       </div>
     </section>
   );

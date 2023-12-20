@@ -5,6 +5,11 @@
   src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
 }
 
+@font-face {
+  font-family: "Hind Regular";
+  src: url("../../../public/assets/fonts/Hind/Hind-Regular.ttf");
+}
+
 /* ------------------- CSS for Contact's Page ----------------------------*/
 
 .container__about {
@@ -42,14 +47,14 @@
 .container__text__about__title {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 10px;
   color: #6C6B6B;
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
   line-height: 24px;
   text-align: justify;
-  font-family: "45 Light";
+  font-family: "Hind Regular";
   width: 630px;
 
 }
@@ -65,7 +70,7 @@ line-height: 20px;
 text-align: justify;
 margin-top: 100px;
 margin-bottom: 70px;
-font-family: "45 Light";
+font-family: "Hind Regular";
 }
 
 
