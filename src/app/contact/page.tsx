@@ -13,11 +13,11 @@ const Contact = () => {
     </div>
     <div className= {styles.container__text__contact}>
       <h2 className={styles.container__text__contact__title}>
-        Get in touch and let's bring your ideas to life. Together, we'll breathe life into your concepts.
+        {`Get in touch and let's bring your ideas to life. Together, we'll breathe life into your concepts.`}
       </h2>
       <p className={styles.container__text__contact__description}>
-      Whether you're interested in our design services, have a project in mind, or just want to say hello, 
-      we're here to connect. Get in touch, and let's start a conversation about turning your vision into reality
+      {`Whether you're interested in our design services, have a project in mind, or just want to say hello, 
+      we're here to connect. Get in touch, and let's start a conversation about turning your vision into reality`}
       </p>
       <div className={styles.container__text__icons}>
         <motion.a href="https://api.whatsapp.com/send?phone=5491141768429&text=Hola, ¿cómo estás? Tengo una consulta para hacerte." target='_blank' rel='noreferrer'
