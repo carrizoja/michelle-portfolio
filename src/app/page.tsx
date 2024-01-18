@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import bg from '../../public/assets/home.jpg'
+import bg from '../../public/assets/home.png'
 export default function Home() {
   return (
   <main className={styles.mainBackground}>
-    <Image 
-  src={bg}
+    <Image
   fill
-  style={{objectFit:"cover"}}
+  src={bg}
+  style={{objectFit:'cover'}}
   alt="Background image"
 />
    </main>
