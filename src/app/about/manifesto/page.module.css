@@ -1,36 +1,8 @@
-@font-face {
-  font-family: "Helvetica Bold";
-  src: url("../../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
-}
 
-@font-face {
-  font-family: "Hind Regular";
-  src: url("../../../../public/assets/fonts/Hind/Hind-Regular.ttf");
-}
 
 /* ------------------- CSS for Manifesto's Page ----------------------------*/
 
-.container__manifesto {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
-.container__title {
-  margin-left: 120px;
-  margin-right: auto;
-  margin-top: 150px;
-}
-
-.section__title {
-  font-family: "Helvetica Bold";
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 56px;
-  text-align: right;
-  color: #6c6b6b;
-  opacity: 0.5;
-}
 
 .container__text__manifesto {
   display: flex;

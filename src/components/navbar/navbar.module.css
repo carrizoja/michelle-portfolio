@@ -13,8 +13,10 @@
   height: 100vh;
   z-index: 100;
   box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09); 
-  /* add transparency 100% */
-  background-color: rgba(255, 255, 255, 0.1);
+  /* add transparency % */
+  background-color: rgba(255, 255, 255, 0.2);
+ /* add blur effect */
+  backdrop-filter: blur(10px);
 }
 
 .innerNav {
@@ -89,13 +91,13 @@ nav .innerNav li a {
 
 nav .innerNav li a:hover {
   opacity: 0.3;
+  /* Add transition effect  */
+  transition: all 0.3s ease-in-out;
 }
 
-/* .submenu {
-  display: none !important;
-} */
+
 .submenu {
-  
+  display: none !important;
 }
 
 .submenu li {
@@ -117,10 +119,20 @@ nav .innerNav li a:hover {
 
 .aboutTitle:hover .submenu {
   display: block !important;
-  /* Add transition effect  */
-  transition: all 0.5s ease-in-out;
+  /* Add transition effect to appear smoothly */
+  transition: all 1s ease-in-out;
+  /* add animation */
+  animation: fadeIn 1s ease-in-out;
 
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* .nav-item:hover .submenu {

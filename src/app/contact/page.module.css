@@ -10,11 +10,7 @@
 
 /* ------------------- CSS for Contact's Page ----------------------------*/
 
-.container__contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+
 .container__text__contact {
   display: flex;
   flex-direction: column;
@@ -25,22 +21,6 @@
   /* set container text to the center of the page */
 }
 
-.container__title {
-  margin-left: 120px;
-  margin-right: auto;
-  margin-top: 150px;
-
-}
-
-.section__title {
-  font-family: 'Helvetica Bold';
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 56px;
-  text-align: right;  
-  color: #6C6B6B;
-  opacity: 0.5;
-  } 
 
 .container__text__contact__title {
   margin-left: auto;

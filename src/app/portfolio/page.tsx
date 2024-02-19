@@ -1,67 +1,131 @@
+"use client";
 import React from "react";
 import styles from "@/app/portfolio/page.module.css";
-import Image from "next/image";
-import portada from "../../../public/assets/portada1.png";
+import globalStyles from "@/app/page.module.css";
+import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { useState } from "react";
+import app from "../../firebase.js";
+import Link from "next/link";
+import { HashLoader } from "react-spinners";
 
 const Portfolio = () => {
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<
+    {
+      id: string;
+      title: string;
+      services: string;
+      shortDescription: string;
+      longDescription: string;
+      mainImage: string;
+      img1: string;
+    }[]
+  >([]);
+
+  const db = getFirestore(app);
+  const itemsCollection = collection(db, "projects");
+  getDocs(itemsCollection).then((querySnapshot) => {
+    if (querySnapshot.empty) {
+      console.log("There are no projects");
+    } else {
+      setProjects(
+        querySnapshot.docs.map(
+          (doc) =>
+            ({ id: doc.id, ...doc.data() } as {
+              id: string;
+              title: string;
+              services: string;
+              shortDescription: string;
+              longDescription: string;
+              mainImage: string;
+              img1: string;
+            })
+        )
+      );
+      setLoading(false);
+    }
+  });
+
   return (
     <>
+      <WhatsAppBtn />
       {/* Main Container start */}
-      <section className={styles.container__portfolio}>
-        <div className={styles.container__title}>
-          <h1 className={styles.section__title}>PORTFOLIO</h1>
+      <section className={globalStyles.container__main}>
+        <div className={globalStyles.container__main__title}>
+          <h1 className={globalStyles.section__title}>PORTFOLIO</h1>
         </div>
         {/* Container projects start */}
         <div className={styles.container__projects}>
           {/* Container list projects start */}
           <div className={styles.container__listProjects}>
-            <div className={styles.project}>
-              <h2 className={styles.project_name}>CIRCULAR ID</h2>
-              <h3 className={styles.project_type}>WEBSITE DESIGN</h3>
-              <p className={styles.project_summary}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
-                ullam non possimus facere molestiae dolorum officiis, mollitia
-                quod quasi incidunt quo, libero unde inventore illum tenetur
-                quos sequi atque sed.
-              </p>
-            </div>
-            <div className={styles.project}>
-              <h2 className={styles.project_name}>FILL THE VOID</h2>
-              <h3 className={styles.project_type}>FASHION DESIGN</h3>
-              <p className={styles.project_summary}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
-                ullam non possimus facere molestiae dolorum officiis, mollitia
-                quod quasi incidunt quo, libero unde inventore illum tenetur
-                quos sequi atque sed.
-              </p>
-            </div>
+            {loading ? (
+              <>
+               <HashLoader color="#6C6B6B"className='spinner' role="status"/>
+              </>
+            ) : (
+              projects.map((project) => (
+                <div key={project.id} className={styles.project}>
+                  <Link
+                    href={`/portfolio#${project.longDescription}`}
+                   >
+                  <h2 className={styles.project_title}>{project.title}</h2>
+                  <h3 className={styles.project_services}>
+                    {project.services}
+                  </h3>
+                  </Link>
+             
+                  <p className={styles.project_shortDescription}>
+                    {project.shortDescription}
+                  </p>
+                </div>
+              ))
+            )}
           </div>
           {/* vertical line */}
-          <figure className={styles.verticalLine}>
-          </figure>
+          <figure className={styles.verticalLine}></figure>
           {/* container projects description start */}
           <div className={styles.container__projects__description}>
-            <div className={styles.project__description}>
-              <Image
-                src= {portada}
-                alt="Circular ID"
-                width={500}
-                height={500}
-              >
-              </Image>
-              <div className={styles.project_text_container}>
-                <h2 className={styles.project_title}>CLIENT</h2>
-                <h3 className={styles.project_name}>WEBSITE DESIGN</h3>
-                <p className={styles.project_briefing}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
-                  ullam non possimus facere molestiae dolorum officiis,
-                  mollitia quod quasi incidunt quo, libero unde inventore illum
-                  tenetur quos sequi atque sed.
-                </p>
-              </div>
-              <iframe  src="https://www.youtube.com/embed/DAtYk-pZLHw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-              <iframe src="https://giphy.com/embed/b2ZMVxPvworgk" width="480" height="288" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/riffsngifs-design-art-b2ZMVxPvworgk">via GIPHY</a></p>
-            </div>
+            {loading ? (
+                      <>
+                      <div className="flex gap-4">
+                      <HashLoader color="#6C6B6B" className='spinner' role="status"/>
+                      </div>
+                      </>
+            ) : (
+              projects.map((project) => (
+                <>
+                  <div className={styles.container__proyect__description}>
+                    <figure className={styles.verticalLine}></figure>
+                    <div
+                      key={project.id}
+                      className={styles.project__description}
+                      id={project.longDescription}
+                    >
+                      <img
+                        className={styles.project_mainImage}
+                        src={project.mainImage}
+                        alt={project.title}
+                      />
+                      <div className={styles.project_text_container}>
+                        <h2 className={styles.project_main_title}>CLIENT</h2>
+                        <h3 className={styles.project_title}>
+                          {project.title}
+                        </h3>
+                        <p className={styles.project_longDescription}>
+                          {project.longDescription}
+                        </p>
+                      </div>
+                      <img
+                        className={styles.proyect_img1}
+                        src={project.img1}
+                        alt={project.title}
+                      />
+                    </div>
+                  </div>
+                </>
+              ))
+            )}
           </div>
         </div>
       </section>

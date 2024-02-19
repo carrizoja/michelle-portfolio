@@ -1,6 +1,43 @@
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("/public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+}
+
+@font-face {
+  font-family: "Hind Regular";
+  src: url("/public/assets/fonts/Hind/Hind-Regular.ttf");
+}
+
+
 .mainBackground {
   background-position: center;
   object-fit: cover;
   width: 100vw;
   height:85vh;
 }
+
+
+
+/* ------------------- CSS for Main containers  ----------------------------*/
+
+.container__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container__main__title {
+  margin-left: 120px;
+  margin-right: auto;
+  margin-top: 150px;
+}
+
+.section__title {
+  font-family: 'Helvetica Bold';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 56px;
+  text-align: right;  
+  color: #6C6B6B;
+  opacity: 0.5;
+  } 

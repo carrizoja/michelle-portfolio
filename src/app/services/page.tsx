@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "@/app/services/page.module.css";
+import globalStyles from "@/app/page.module.css";
 import { promises as fs } from "fs";
+import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
 
 const Services = async () => {
   const file = await fs.readFile(
@@ -10,16 +12,21 @@ const Services = async () => {
   const data = JSON.parse(file);
   return (
     <>
-      <section className={styles.container__services}>
-        <div className={styles.container__title}>
-          <h1 className={styles.section__title}>SERVICES</h1>
+      <WhatsAppBtn />
+      <section className={globalStyles.container__main}>
+        <div className={globalStyles.container__main__title}>
+          <h1 className={globalStyles.section__title}>SERVICES</h1>
         </div>
         <div className={styles.container__listServices}>
           {data.map((service: any) => (
             <div key={service.id} className={styles.container__service}>
               <div className={styles.service__item}>
-                <h2 className={styles.service_title}>{service.service_title}</h2>
-                <p className={styles.service_description}>{service.service_description}</p>
+                <h2 className={styles.service_title}>
+                  {service.service_title}
+                </h2>
+                <p className={styles.service_description}>
+                  {service.service_description}
+                </p>
               </div>
             </div>
           ))}

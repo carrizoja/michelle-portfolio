@@ -2,12 +2,13 @@
 
 import React from "react";
 import styles from "@/app/about/manifesto/page.module.css";
+import globalStyles from '@/app/page.module.css';
 
 const Manifesto = () => {
   return (
-    <section className={styles.container__manifesto}>
-      <div className={styles.container__title}>
-        <h1 className={styles.section__title}>MANIFESTO</h1>
+    <section className={globalStyles.container__main}>
+      <div className={globalStyles.container__main__title}>
+        <h1 className={globalStyles.section__title}>MANIFESTO</h1>
       </div>
       <div className={styles.container__text__manifesto}>
         <p className={styles.container__text__manifesto__description}>

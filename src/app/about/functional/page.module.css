@@ -1,0 +1,304 @@
+/* Custom fonts */
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("/public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+}
+
+@font-face {
+  font-family: "Hind Regular";
+  src: url("/public/assets/fonts/Hind/Hind-Regular.ttf");
+}
+
+/* ------------------- CSS for Funtional's Page ----------------------------*/
+
+/* Mosaic section */
+
+
+
+.container__functional {
+  gap: 50px;
+}
+
+.container__main__containerMosaics {
+  width: 70%;
+  /* max-width: 680px; */
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(11, minmax(10px, 150px));
+  /* add grid template area */
+  grid-template-areas:
+    "item01 item01 item01 item02"
+    "item01 item01 item01 item02"
+    "item06 item07 item07 item02"
+    "item06 item07 item07 item11"
+    "item09 item07 item07 item11"
+    "item09 item12 item13 item11"
+    "item14 item14 item15 item16"
+    "item17 item18 item19 item20"
+    "item10 item10 item08 item03"
+    "item10 item10 item08 item03"
+    "item10 item10 item05 item03";
+
+  grid-gap: 3px;
+}
+
+.item01 {
+  grid-area: item01;
+}
+.item01 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item02 {
+  grid-area: item02;
+}
+
+.item02 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.item03 {
+  grid-area: item03;
+}
+
+.item03 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item05 {
+  grid-area: item05;
+}
+
+.item05 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item06 {
+  grid-area: item06;
+}
+.item06 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.item07 {
+  grid-area: item07;
+}
+
+.item07 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item08 {
+  grid-area: item08;
+}
+
+.item08 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item09 {
+  grid-area: item09;
+}
+
+.item09 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item10 {
+  grid-area: item10;
+}
+
+.item10 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item11 {
+  grid-area: item11;
+}
+.item11 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item12 {
+  grid-area: item12;
+}
+
+.item12 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item13 {
+  grid-area: item13;
+}
+
+.item13 img {
+  width: 100%;
+  height: 100%;
+  object-fit:inherit;
+}
+
+.item14 {
+  grid-area: item14;
+}
+
+.item14 video {
+  /* rotate 270 degrees */
+  transform: rotate(270deg);
+  object-fit:inherit;
+  width: 100%;
+}
+
+.item15 {
+  grid-area: item15;
+}
+
+.item15 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.item16 {
+  grid-area: item16;
+}
+
+.item16 img {
+width: 100%;
+height: 100%;
+object-fit:fill;
+
+}
+
+.item17 {
+  grid-area: item17;
+}
+
+.item17 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.item18 {
+  grid-area: item18;
+}
+.item18 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item19 {
+  grid-area: item19;
+}
+
+.item19 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+
+.item20 {
+  grid-area: item20;
+}
+
+.item20 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}
+
+.border_radius {
+  border-radius: 3px;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative_position {
+  position: relative;
+}
+
+.flex_center::before {
+  counter-increment: grid-item;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 960px) {
+  .container__main__containerMosaics {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flex_center {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+
+@media (max-width: 476px) {
+  .container__main__containerMosaics {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(1440deg);
+    opacity: 0;
+    content: unset;
+  }
+}
+
+@keyframes blink {
+  from {
+  }
+  to {
+    opacity: 0;
+    content: unset;
+  }
+}

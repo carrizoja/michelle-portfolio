@@ -28,6 +28,7 @@ const Navbar = () => {
                 <Link
                   href="/"
                   onClick={() => {
+                    setShow((show) => !show);
                     window.scrollTo({
                       top: 0,
                       left: 0,
@@ -53,13 +54,46 @@ const Navbar = () => {
                 </Link>
                 <motion.ul className={styles.submenu}>
                   <motion.li className={styles.submenu_li}>
-                    <Link href="/about"><p className={styles.submenu_title}>About Me</p></Link>
+                    <Link href="/about"
+                      onClick={() => {
+                        setShow((show) => !show);
+                        window.scrollTo({
+                          top: 0,
+                          left: 0,
+                          behavior: "smooth",
+                        });
+                      }}
+                    ><p className={styles.submenu_title}>About Me</p></Link>
                   </motion.li>
                   <motion.li className={styles.submenu_li}>
-                    <Link href="/about/manifesto"><p className={styles.submenu_title}>Manifesto</p></Link>
+                    <Link
+                     href="/about/manifesto"
+                     onClick={() => {
+                      setShow((show) => !show);
+                      window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth",
+                      });
+                    }}
+                     ><p className={styles.submenu_title}>Manifesto</p></Link>
                   </motion.li>
                   <motion.li className={styles.submenu_li}>
-                    <Link href="/about/functional"><p className={styles.submenu_title}>Functional Sculptures</p></Link>
+                    <Link 
+                    href="/about/functional"
+                    onClick={() => {
+                      setShow((show) => !show);
+                      window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth",
+                      });
+                    }}
+                    >
+
+                    <p className={styles.submenu_title}>Functional Sculptures</p>
+                    
+                    </Link>
                   </motion.li>
                 </motion.ul>
               </motion.li>
@@ -67,6 +101,7 @@ const Navbar = () => {
                 <Link
                   href="/services"
                   onClick={() => {
+                    setShow((show) => !show);
                     window.scrollTo({
                       top: 0,
                       left: 0,
@@ -81,6 +116,7 @@ const Navbar = () => {
                 <Link
                   href="/portfolio"
                   onClick={() => {
+                    setShow((show) => !show);
                     window.scrollTo({
                       top: 0,
                       left: 0,
@@ -95,6 +131,7 @@ const Navbar = () => {
                 <Link
                   href="/contact"
                   onClick={() => {
+                    setShow((show) => !show);
                     window.scrollTo({
                       top: 0,
                       left: 0,
