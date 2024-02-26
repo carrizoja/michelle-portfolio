@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "Helvetica Bold";  
-  src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+  font-family: "Helvetica Bold";
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+  font-weight: bold;
+  font-style:normal;
 }
 
 /* ------------------- CSS for Navbar ----------------------------*/

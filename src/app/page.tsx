@@ -5,10 +5,11 @@ export default function Home() {
   return (
   <main className={styles.mainBackground}>
     <Image
-  fill
+  fill 
   src={bg}
   style={{objectFit:'cover'}}
   alt="Background image"
+  
 />
    </main>
 

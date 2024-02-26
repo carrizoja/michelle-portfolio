@@ -1,12 +1,16 @@
 @font-face {
-  font-family: "Helvetica Bold";
-  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+  font-family: 'Helvetica Bold';
+  src: url('https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf');
+  font-weight: bold;
+  font-style:normal;
 }
 
 @font-face {
-  font-family: "Hind Regular";
-  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822309/fonts/Hind/j30z1c9whbj0btnj2glf.txt");
-}
+  font-family: 'Hind Regular';
+  src: url('https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf');
+  font-weight: normal;
+  font-style:normal;
+} 
 
 /* ------------------- CSS for Contact's Page ----------------------------*/
 
@@ -59,7 +63,7 @@ font-family: "Hind Regular";
 }
 
 .mailIcon:hover  {
-  color: #6abd45;
+  opacity: 0.5;
 }
 
 .whatsAppIcon {
@@ -71,7 +75,7 @@ font-family: "Hind Regular";
 }
 
 .whatsAppIcon:hover {
-  color: #6abd45;
+  opacity: 0.5;
 }
 
 .container__text__icons {

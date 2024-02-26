@@ -1,12 +1,16 @@
 @font-face {
   font-family: "Helvetica Bold";
-  src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+  font-weight: bold;
+  font-style:normal;
 }
 
 @font-face {
-  font-family: "Hind Regular";
-  src: url("../../../public/assets/fonts/Hind/Hind-Regular.ttf");
-}
+  font-family: 'Hind Regular';
+  src: url('https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf');
+  font-weight: normal;
+  font-style:normal;
+} 
 
 /* ------------------- CSS for Contact's Page ----------------------------*/
 
@@ -23,13 +27,18 @@
 
 .container__listServices {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 60%;
   align-items: center;
   margin: 0 auto;
   justify-content: center;
   margin-bottom: auto;
   gap: 30px;
+  margin-top: 50px;
+}
+
+.container__service {
+  display: flex;
 }
 
 .service_title {
@@ -50,4 +59,15 @@
   font-weight: 400;
   line-height: normal;
   font-family: 'Hind Regular';
+}
+
+.verticalLine {
+  border-left: 3px solid #6C6B6B;
+  /* calculate the height of the container_main  */
+  margin-left: 10px;
+  margin-right: 5%;
+}
+
+.service__item {
+  margin-bottom: 50px;
 }
