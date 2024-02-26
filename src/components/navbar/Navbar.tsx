@@ -24,9 +24,14 @@ const Navbar = () => {
         >
           <motion.div className={styles.innerNav}>
             <ul id="navlinks">
-              <motion.li>
+            
+              <motion.li
+                 animate={show ? "open" : "closed"}
+                 variants={variants}
+                 transition={{ duration: 0.5 }}
+               >
                 <Link
-                  href="/"
+                  href="/about"
                   onClick={() => {
                     setShow((show) => !show);
                     window.scrollTo({
@@ -36,68 +41,14 @@ const Navbar = () => {
                     });
                   }}
                 >
-                  <p className={styles.homeTitle}>HOME</p>
+                  <p className={styles.linkTitles}>ABOUT</p>
                 </Link>
               </motion.li>
-              <motion.li className={styles.aboutTitle}>
-                <Link
-                  href="#"
-                  onClick={() => {
-                    window.scrollTo({
-                      top: 0,
-                      left: 0,
-                      behavior: "smooth",
-                    });
-                  }}
-                >
-                  ABOUT
-                </Link>
-                <motion.ul className={styles.submenu}>
-                  <motion.li className={styles.submenu_li}>
-                    <Link href="/about"
-                      onClick={() => {
-                        setShow((show) => !show);
-                        window.scrollTo({
-                          top: 0,
-                          left: 0,
-                          behavior: "smooth",
-                        });
-                      }}
-                    ><p className={styles.submenu_title}>About Me</p></Link>
-                  </motion.li>
-                  <motion.li className={styles.submenu_li}>
-                    <Link
-                     href="/about/manifesto"
-                     onClick={() => {
-                      setShow((show) => !show);
-                      window.scrollTo({
-                        top: 0,
-                        left: 0,
-                        behavior: "smooth",
-                      });
-                    }}
-                     ><p className={styles.submenu_title}>Manifesto</p></Link>
-                  </motion.li>
-                  <motion.li className={styles.submenu_li}>
-                    <Link 
-                    href="/about/functional"
-                    onClick={() => {
-                      setShow((show) => !show);
-                      window.scrollTo({
-                        top: 0,
-                        left: 0,
-                        behavior: "smooth",
-                      });
-                    }}
-                    >
-
-                    <p className={styles.submenu_title}>Functional Sculptures</p>
-                    
-                    </Link>
-                  </motion.li>
-                </motion.ul>
-              </motion.li>
-              <motion.li>
+              <motion.li
+                animate={show ? "open" : "closed"}
+                variants={variants}
+                transition={{ duration: 0.8}}
+              >
                 <Link
                   href="/services"
                   onClick={() => {
@@ -109,14 +60,18 @@ const Navbar = () => {
                     });
                   }}
                 >
-                  SERVICES
+                  <p className={styles.linkTitles}>SERVICES</p>
                 </Link>
               </motion.li>
-              <motion.li>
+              <motion.li
+               className={styles.aboutTitle}
+               animate={show ? "open" : "closed"}
+               variants={variants}
+               transition={{ duration: 1.1 }}
+               >
                 <Link
-                  href="/portfolio"
+                  href="#"
                   onClick={() => {
-                    setShow((show) => !show);
                     window.scrollTo({
                       top: 0,
                       left: 0,
@@ -124,10 +79,41 @@ const Navbar = () => {
                     });
                   }}
                 >
-                  PORTFOLIO
+                  <p className={styles.linkTitles}>PORTFOLIO</p>
                 </Link>
+                 <motion.ul className={styles.submenu}>
+                  <motion.li className={styles.submenu_li}>
+                    <Link href="/portfolio/art"
+                      onClick={() => {
+                        setShow((show) => !show);
+                        window.scrollTo({
+                          top: 0,
+                          left: 0,
+                          behavior: "smooth",
+                        });
+                      }}
+                    ><p className={styles.submenu_title}>ART</p></Link>
+                  </motion.li>
+                  <motion.li className={styles.submenu_li}>
+                    <Link
+                     href="/portfolio"
+                     onClick={() => {
+                      setShow((show) => !show);
+                      window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth",
+                      });
+                    }}
+                     ><p className={styles.submenu_title}>DESIGN</p></Link>
+                  </motion.li>
+                </motion.ul>
               </motion.li>
-              <motion.li>
+              <motion.li
+               animate={show ? "open" : "closed"}
+               variants={variants}
+               transition={{ duration: 1.4 }}
+              >
                 <Link
                   href="/contact"
                   onClick={() => {
@@ -139,7 +125,7 @@ const Navbar = () => {
                     });
                   }}
                 >
-                  CONTACT
+                  <p className={styles.linkTitles}>CONTACT</p>
                 </Link>
               </motion.li>
             </ul>
@@ -151,7 +137,13 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          {show ? <CloseIcon className={styles.closeIcon} /> : <MenuIcon />}
+          {show ? (
+            <Link href="/">
+              <CloseIcon className={styles.closeIcon} />
+            </Link>
+          ) : (
+            <MenuIcon />
+          )}
         </motion.button>
       </div>
     </>

@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Helvetica Bold";
-  src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
 }
 
 @font-face {
   font-family: "Hind Regular";
-  src: url("../../../public/assets/fonts/Hind/Hind-Regular.ttf");
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822309/fonts/Hind/j30z1c9whbj0btnj2glf.txt");
 }
 
 /* ------------------- CSS for Contact's Page ----------------------------*/

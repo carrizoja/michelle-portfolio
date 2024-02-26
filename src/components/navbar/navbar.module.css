@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Helvetica Bold";
+  font-family: "Helvetica Bold";  
   src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
 }
 
@@ -61,7 +61,8 @@ button.toggle:hover {
 }
 
 .homeTitle {
-  font-size: 30px;
+  font-size: 35px;
+  font-family: "Helvetica Bold";
 }
 
 nav .innerNav ul {
@@ -95,6 +96,12 @@ nav .innerNav li a:hover {
   transition: all 0.3s ease-in-out;
 }
 
+.linkTitles {
+  font-size: 70px;
+  font-family: "Helvetica Bold";
+
+}
+
 
 .submenu {
   display: none !important;
@@ -109,7 +116,8 @@ nav .innerNav li a:hover {
 }
 
 .submenu_title {
-  font-size: 30px;
+  font-size: 35px;
+  font-family: "Helvetica Bold";
 }
 
 .submenu_li {

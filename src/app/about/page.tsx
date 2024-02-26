@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/app/about/page.module.css";
 import globalStyles from "@/app/page.module.css";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
-
+import Link from "next/link";
 const About = () => {
   return (
     <>
@@ -76,7 +76,11 @@ const About = () => {
           And the result...we’ll be discovering it….
           `}
           </p>
+          <div className={styles.container__manifestoButton}>
+          <Link href="/about/manifesto"><button className={styles.manifestoButton}><p>READ MY MANIFESTO</p></button></Link>
         </div>
+        </div>
+       
       </section>
     </>
   );

@@ -25,7 +25,7 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr(10px, 150px));
   grid-template-rows: repeat(11, minmax(10px, 150px));
   /* add grid template area */
   grid-template-areas:
@@ -301,4 +301,29 @@ object-fit:fill;
     opacity: 0;
     content: unset;
   }
+}
+
+/* CSS for Social Media */
+
+.container_socialMedia {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: flex-end;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.container__socialMedia_text {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: end;
+}
+
+
+
+.socialMedia_icon:hover {
+  opacity: 0.5;
+  transition: 0.5s ease-out;
 }

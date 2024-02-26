@@ -61,7 +61,9 @@ const Portfolio = () => {
           <div className={styles.container__listProjects}>
             {loading ? (
               <>
-               <HashLoader color="#6C6B6B"className='spinner' role="status"/>
+              <div className={styles.container_hashLoader}>
+              <HashLoader color="#6C6B6B"className='spinner' role="status"/>
+              </div>          
               </>
             ) : (
               projects.map((project) => (
@@ -88,7 +90,7 @@ const Portfolio = () => {
           <div className={styles.container__projects__description}>
             {loading ? (
                       <>
-                      <div className="flex gap-4">
+                      <div className={styles.container_hashLoader}>
                       <HashLoader color="#6C6B6B" className='spinner' role="status"/>
                       </div>
                       </>

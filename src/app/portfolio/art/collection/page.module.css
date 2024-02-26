@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Hind Regular";
+    src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822309/fonts/Hind/j30z1c9whbj0btnj2glf.txt");
+  }
+
+/* CSS for Art Collection */
+
+.container__text__art_collection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.container__text__art_collection p {
+    font-family: "Hind Regular";
+    font-size: 17px;
+    text-align: justify;
+}

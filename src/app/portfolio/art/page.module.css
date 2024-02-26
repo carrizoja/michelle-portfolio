@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Helvetica Bold";  
+    src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+  }
+
+/* CSS for Art Section */
+
+.container__text__art {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content:flex-start;
+    width: 85%;
+    height: 50vh;
+    gap: 4rem;
+}
+
+.container__text__art h2 {
+    font-family: "Helvetica Bold";
+    font-size: 70px;
+    color: #6C6B6B;
+    margin-bottom: 0;
+}
+
+.container__text__art h2:hover {
+    opacity: 0.5;
+    /* add transition effect smooth */
+    transition: 0.5s ease-out;
+
+}
