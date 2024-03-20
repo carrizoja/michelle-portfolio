@@ -42,8 +42,8 @@
 }
 
 .service_title {
-  font-family: 'Helvetica Regular';
-  color: #6C6B6B;
+  font-family: 'Helvetica Bold';
+  color: #acacac;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -69,5 +69,18 @@
 }
 
 .service__item {
-  margin-bottom: 50px;
+  margin-top: 10%;
+  /* margin-bottom: 50px; */
 }
+
+/* Media query for Mobile  */
+@media screen and (width < 768px) {
+  .container__listServices {
+    width: 90%;
+  }
+
+  .service_title {
+    font-size: 17px;
+  }
+}
+

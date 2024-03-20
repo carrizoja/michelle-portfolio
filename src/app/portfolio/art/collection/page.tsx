@@ -3,6 +3,7 @@ import globalStyles from "@/app/page.module.css";
 import styles from "./page.module.css";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
 import Link from "next/link";
+import Footer from "@/components/footer/Footer";
 
 const Collection = () => {
   return (
@@ -16,6 +17,7 @@ const Collection = () => {
        <p>This section will be available soon.</p>
       </div>
     </section>
+    <Footer />
   </>
   )
 }

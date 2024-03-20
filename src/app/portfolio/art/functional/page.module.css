@@ -26,7 +26,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr(10px, 150px));
-  grid-template-rows: repeat(11, minmax(10px, 150px));
+  grid-template-rows: repeat(11, minmax(10px, 230px));
   /* add grid template area */
   grid-template-areas:
     "item01 item01 item01 item02"
@@ -159,7 +159,7 @@
 .item13 img {
   width: 100%;
   height: 100%;
-  object-fit:inherit;
+  object-fit:cover;
 }
 
 .item14 {
@@ -180,7 +180,7 @@
 .item15 img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .item16 {
@@ -190,7 +190,7 @@
 .item16 img {
 width: 100%;
 height: 100%;
-object-fit:fill;
+object-fit:cover;
 
 }
 
@@ -221,7 +221,7 @@ object-fit:fill;
 .item19 img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 
@@ -265,23 +265,7 @@ object-fit:fill;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 960px) {
-  .container__main__containerMosaics {
-    padding: 0;
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  .flex_center {
-    grid-column: unset;
-    grid-row: unset;
-  }
-}
-
-@media (max-width: 476px) {
-  .container__main__containerMosaics {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 
 @keyframes spin {
   from {
@@ -326,4 +310,57 @@ object-fit:fill;
 .socialMedia_icon:hover {
   opacity: 0.5;
   transition: 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .container__main__containerMosaics {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr(10px, 100px));
+    grid-template-rows: repeat(11, minmax(10px, 80px));
+    /* add grid template area */
+    grid-template-areas:
+      "item01 item01 item01 item02"
+      "item01 item01 item01 item02"
+      "item06 item07 item07 item02"
+      "item06 item07 item07 item11"
+      "item09 item07 item07 item11"
+      "item09 item12 item13 item11"
+      "item14 item14 item15 item16"
+      "item17 item18 item19 item20"
+      "item10 item10 item08 item03"
+      "item10 item10 item08 item03"
+      "item10 item10 item05 item03";
+  
+    grid-gap: 3px;
+  }
+
+  .container_socialMedia {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 30%;
+  }
+
+  .container__socialMedia_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items:flex-start;
+  }
+
+  .container_socialMedia h2 {
+    font-size: 15px;
+    font-family: "Hind Regular";
+  }
+
+  .container_socialMedia p {
+    font-size: 12px;
+    font-family: "Hind Regular";
+  }
 }

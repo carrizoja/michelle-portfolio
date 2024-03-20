@@ -3,13 +3,14 @@ import styles from "@/app/about/page.module.css";
 import globalStyles from "@/app/page.module.css";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
 import Link from "next/link";
+import Footer from "@/components/footer/Footer";
 const About = () => {
   return (
     <>
       <WhatsAppBtn />
       <section className={globalStyles.container__main}>
         <div className={globalStyles.container__main__title}>
-          <h1 className={globalStyles.section__title}>ABOUT</h1>
+          <h1 className={globalStyles.section__title}>ABOUT ME</h1>
         </div>
         <div className={styles.container__text__about}>
           <p className={styles.container__text__about__description}>
@@ -82,6 +83,7 @@ const About = () => {
         </div>
        
       </section>
+      <Footer></Footer>
     </>
   );
 };

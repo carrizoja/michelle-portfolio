@@ -17,6 +17,7 @@ import jpg9 from "../../../../../public/assets/mosaic/JPG9.jpg";
 import jpg10 from "../../../../../public/assets/mosaic/jpg10.jpg";
 import jpg11 from "../../../../../public/assets/mosaic/jpg11.jpg";
 import Link from "next/link";
+import Footer from "@/components/footer/Footer";
 const Functional = () => {
   return (
     <>
@@ -276,6 +277,7 @@ const Functional = () => {
 
         </div>
       </section>
+      <Footer />
     </>
   );
 };

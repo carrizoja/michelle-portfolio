@@ -78,6 +78,17 @@ font-family: "Hind Regular";
   opacity: 0.5;
 }
 
+.instagramIcon {
+  color: var(--white);
+  width: 48.58px;
+  height: 46.83px;
+  margin-left: 35px;
+}
+
+.instagramIcon:hover {
+  opacity: 0.5;
+}
+
 .container__text__icons {
 margin-left: auto;
 margin-right: auto;
@@ -87,25 +98,31 @@ flex-direction: row;
 align-items: center;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+}
+
 
 /* Media Query for Mobile */
 @media only screen and (max-width: 768px) {
   .container__contact {
-    margin-top: 40px;
-  }
-
-  .container__text__contact__description {
-    width: 355px;
+    margin-top: 20px;
   }
 
   .container__text__contact__title{
     font-size: 15px;
+    width: 90%;
+    margin-top: 60px;
   }
 
   .container__text__contact__description {
 margin-top: 60px;
 margin-bottom: 70px;
 font-size: 15px;
+width: 90%;
   }
 
   .mailIcon {
@@ -119,6 +136,13 @@ font-size: 15px;
     width: 35.58px;
     height: 35.83px;
     margin-right: 30px;
+  }
+
+  .instagramIcon {
+    color: var(--white);
+    width: 31.58px;
+    height: 31.83px;
+    margin-left: 30px;
   }
 
 

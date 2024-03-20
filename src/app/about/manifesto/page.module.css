@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'Hind Regular';
+  src: url('https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf');
+  font-weight: normal;
+  font-style:normal;
+} 
 
 /* ------------------- CSS for Manifesto's Page ----------------------------*/
 
@@ -26,12 +31,10 @@
   text-align: left;
 }
 
-/* .description__first_paragraph {
-  width: 250px;
-  text-align: justify;
+@media screen and (width < 768px) {
+  .container__text__manifesto {
+    width: 90%;
+    margin-top: 60px;
+    font-size: 15px;
+  }
 }
-
-.description__second_paragraph {
-  width: 250px;
-  text-align: justify;
-} */

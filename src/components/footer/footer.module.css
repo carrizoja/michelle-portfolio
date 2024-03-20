@@ -36,3 +36,28 @@
   color: #6C6B6B;
   text-decoration: none;
 }
+
+/* Media query  */
+@media screen and (width < 768px) {
+ 
+  .containerText {
+   
+    justify-content:center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+
+  .textAllRightsReserved {
+    font-size: 8px;
+    padding-top: 2px;
+  }
+
+  .textName {
+    font-size: 10px;
+  }
+
+  .container {
+    height: 70px;
+  }
+
+} 

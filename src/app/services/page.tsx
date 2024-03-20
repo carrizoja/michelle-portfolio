@@ -3,6 +3,7 @@ import styles from "@/app/services/page.module.css";
 import globalStyles from "@/app/page.module.css";
 import { promises as fs } from "fs";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
+import Footer from "@/components/footer/Footer";
 
 const Services = async () => {
   const file = await fs.readFile(
@@ -36,6 +37,7 @@ const Services = async () => {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </>
   );
 };

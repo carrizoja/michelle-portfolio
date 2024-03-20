@@ -84,7 +84,6 @@ font-family: "Hind Regular";
 
 
 
-
 /* Media Query for Mobile */
 @media only screen and (max-width: 768px) {
   .container__about {
@@ -92,18 +91,31 @@ font-family: "Hind Regular";
   }
 
   .container__text__about__description {
-    width: 355px;
+    width: 90%;
+    margin-top: 60px;
+    margin-bottom: 5px;
   }
 
   .container__text__about__title{
     font-size: 15px;
   }
 
-  .container__text__about__description {
-margin-top: 60px;
-margin-bottom: 70px;
-font-size: 15px;
-  }
+ .container__text__about__description_paragraph {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+ }
+
+ .container__manifestoButton {
+   margin: 0 auto;
+   margin-top: 30px;
+ }
+
+ .container__manifestoButton p {
+    font-size: 15px;
+  
+ }
+
 
 }
 

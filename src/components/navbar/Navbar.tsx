@@ -156,6 +156,11 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
+           {show ? (
+              <CloseIcon className={styles.closeIcon} />
+          ) : (
+            <MenuIcon />
+          )}
         </motion.button>
       </div>
     </>

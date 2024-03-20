@@ -6,7 +6,9 @@ import globalStyles from "@/app/page.module.css";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
+import Footer from "@/components/footer/Footer";
 const Contact = () => {
   return (
     <>
@@ -46,9 +48,23 @@ const Contact = () => {
             >
               <AiOutlineMail className={styles.mailIcon} />
             </motion.a>
+            <motion.a
+              href="https://www.instagram.com/mugrabimichelle/"
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{
+                scale: 1.1,
+                transition: { type: "spring", stiffness: 900, damping: 20 },
+              }}
+            >
+              <FaInstagram className={styles.instagramIcon} />
+            </motion.a>
           </div>
         </div>
       </section>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </>
   );
 };

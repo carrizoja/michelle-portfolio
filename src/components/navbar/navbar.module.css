@@ -2,7 +2,7 @@
   font-family: "Helvetica Bold";
   src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
   font-weight: bold;
-  font-style:normal;
+  font-style: normal;
 }
 
 /* ------------------- CSS for Navbar ----------------------------*/
@@ -14,17 +14,17 @@
   width: 100%;
   height: 100vh;
   z-index: 100;
-  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0,0.09); 
+  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0, 0.09);
   /* add transparency % */
   background-color: rgba(255, 255, 255, 0.2);
- /* add blur effect */
+  /* add blur effect */
   backdrop-filter: blur(10px);
 }
 
 .innerNav {
   position: absolute;
   top: 10rem;
-  bottom: 0; 
+  bottom: 0;
   width: 100%;
   text-align: end;
   overflow-y: auto;
@@ -32,8 +32,8 @@
 }
 
 button.toggle {
-  background-color: #F5F5F5;
-  color: #F5F5F5;
+  background-color: #f5f5f5;
+  color: #f5f5f5;
   z-index: 101;
   position: fixed;
   outline: 0;
@@ -41,7 +41,7 @@ button.toggle {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none; 
+  -ms-user-select: none;
   top: 4rem;
   right: 35px;
   width: 50px;
@@ -49,7 +49,6 @@ button.toggle {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
-
 }
 
 button.toggle:hover {
@@ -57,7 +56,7 @@ button.toggle:hover {
 }
 
 .closeIcon {
-  color: #6C6B6B;
+  color: #6c6b6b;
 }
 
 .homeTitle {
@@ -84,11 +83,10 @@ nav .innerNav ul li {
 nav .innerNav li a {
   font-size: 40px;
   font-family: "Helvetica Bold";
-  color: #6C6B6B;
+  color: #6c6b6b;
   /* opacity: 0.5; */
   text-decoration: none;
 }
-
 
 nav .innerNav li a:hover {
   opacity: 0.3;
@@ -100,7 +98,6 @@ nav .innerNav li a:hover {
   font-size: 70px;
   font-family: "Helvetica Bold";
 }
-
 
 .submenu {
   display: none !important;
@@ -123,14 +120,12 @@ nav .innerNav li a:hover {
   padding-right: 30px !important;
 }
 
-
 .aboutTitle:hover .submenu {
   display: block !important;
   /* Add transition effect to appear smoothly */
   transition: all 1s ease-in-out;
   /* add animation */
   animation: fadeIn 1s ease-in-out;
-
 }
 
 @keyframes fadeIn {
@@ -142,12 +137,8 @@ nav .innerNav li a:hover {
   }
 }
 
-
 /* CSS for mobile devices */
-@media only screen and (max-width:768px){
-  .nav {
-    width: 150px;   
-  }
+@media only screen and (max-width: 768px) {
   button.toggle {
     right: 1px;
     top: 105px;
@@ -157,17 +148,64 @@ nav .innerNav li a:hover {
     height: 85vh;
   }
 
+  button.toggle {
+    z-index: 101;
+    position: fixed;
+    outline: 0;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    top: 5rem;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .homeTitle {
+    font-size: 20px;
+  }
+
+  nav .innerNav li a {
+    font-size: 20px;
+  }
+
+  .linkTitles {
+    font-size: 40px;
+  }
+
+  .submenu_title {
+    font-size: 20px;
+
+  }
+
+  nav .innerNav {
+    margin-top: 4rem;
+  }
+
+  nav .innerNav ul li {
+    padding-right: 25px;
+    padding-top: 5px;
+  }
+
+  nav .innerNav ul {
+    margin-top: 1rem;
+  }
+
+  .submenu li {
+    height: 50px;
+  }
+
+
 }
 
 /* Media Query for Tablet */
 
-@media only screen and (min-width: 767px) and (max-width: 1023px){
-
-
-button.toggle {
-  display: block;
-  right: 2%;
-  top: 165px;
-} 
-
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  button.toggle {
+    display: block;
+    right: 2%;
+    top: 165px;
+  }
 }
