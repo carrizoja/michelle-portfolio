@@ -24,6 +24,25 @@ const Navbar = () => {
         >
           <motion.div className={styles.innerNav}>
             <ul id="navlinks">
+            <motion.li
+                 animate={show ? "open" : "closed"}
+                 variants={variants}
+                 transition={{ duration: 0.3 }}
+               >
+                <Link
+                  href="/"
+                  onClick={() => {
+                    setShow((show) => !show);
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  <p className={styles.linkHome}>HOME</p>
+                </Link>
+              </motion.li>
             
               <motion.li
                  animate={show ? "open" : "closed"}
@@ -137,13 +156,6 @@ const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          {show ? (
-            <Link href="/">
-              <CloseIcon className={styles.closeIcon} />
-            </Link>
-          ) : (
-            <MenuIcon />
-          )}
         </motion.button>
       </div>
     </>

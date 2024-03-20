@@ -2,17 +2,17 @@ import React from "react";
 import styles from "@/app/portfolio/art/functional/page.module.css";
 import globalStyles from "@/app/page.module.css";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
-import jpg1 from "../../../../../public/assets/mosaic/jpg1.jpg";
+import jpg1 from "../../../../../public/assets/mosaic/jpg1ok.v1.1.jpg";
 import jpg7 from "../../../../../public/assets/mosaic/jpg7.png";
 import jpg2 from "../../../../../public/assets/mosaic/JPG2.jpeg";
-import jpg5 from "../../../../../public/assets/mosaic/jpg5.jpg";
-import jpg3 from "../../../../../public/assets/mosaic/jpg3.jpg";
+import jpg5 from "../../../../../public/assets/mosaic/JPG5V1.1.jpg";
+import jpg3 from "../../../../../public/assets/mosaic/JPG3v1.1.jpg";
 import jpg6 from "../../../../../public/assets/mosaic/jpg6.jpg";
 import orquidea from "../../../../../public/assets/mosaic/orquideanaranja.png";
 import orquideamar from "../../../../../public/assets/mosaic/orquideamar.png";
 import orquid4 from "../../../../../public/assets/mosaic/orchid4.png";
 import orquid6 from "../../../../../public/assets/mosaic/orchid6.png";
-import jpg8 from "../../../../../public/assets/mosaic/jpg7.jpg";
+import jpg8 from "../../../../../public/assets/mosaic/JPG7okv1.1.jpg";
 import jpg9 from "../../../../../public/assets/mosaic/JPG9.jpg";
 import jpg10 from "../../../../../public/assets/mosaic/jpg10.jpg";
 import jpg11 from "../../../../../public/assets/mosaic/jpg11.jpg";
@@ -55,6 +55,7 @@ const Functional = () => {
               src="https://res.cloudinary.com/dyorbs4xf/video/upload/v1708283981/videos/video1_wpibxe.mp4"
               muted
               autoPlay
+              loop
             ></video>
           </div>
           <div
@@ -158,6 +159,7 @@ const Functional = () => {
               src="https://res.cloudinary.com/dyorbs4xf/video/upload/v1708287269/videos/IMG_0961_1_vvsyeh.mp4"
               muted
               autoPlay
+              loop
             ></video>
           </div>
           <div
@@ -185,6 +187,7 @@ const Functional = () => {
               src="https://res.cloudinary.com/dyorbs4xf/video/upload/v1708288081/videos/IMG_0962_wrawco.mp4"
               muted
               autoPlay
+              loop
             ></video>
           </div>
           <div
@@ -222,6 +225,7 @@ const Functional = () => {
               src="https://res.cloudinary.com/dyorbs4xf/video/upload/v1708904239/videos/hzjplwintxi5typbzuhe.mp4"
               muted
               autoPlay
+              loop
             ></video>
           </div>
           <div
@@ -237,6 +241,7 @@ const Functional = () => {
               src="https://res.cloudinary.com/dyorbs4xf/video/upload/v1708904237/videos/lrpic2srwr4pyedhy9tp.mp4"
               muted
               autoPlay
+              loop
             ></video>
           </div>
           <div
