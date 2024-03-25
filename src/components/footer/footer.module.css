@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-
+  background-color: #e6e5e4;
 }
 
 .containerText {
@@ -61,3 +61,10 @@
   }
 
 } 
+
+/* Media queries for Tablet View */
+@media screen and (768px < width < 1025px) {
+  .containerText {
+    margin-right: 15%;
+  }
+}

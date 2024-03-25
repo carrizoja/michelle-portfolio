@@ -23,7 +23,7 @@ const Contact = () => {
           </h2>
           <p className={styles.container__text__contact__description}>
             {`Whether you're interested in our design services, have a project in mind, or just want to say hello, 
-      we're here to connect. Get in touch, and let's start a conversation about turning your vision into reality`}
+      we're here to connect. Get in touch, and let's start a conversation about turning your vision into reality.`}
           </p>
           <div className={styles.container__text__icons}>
             <motion.a

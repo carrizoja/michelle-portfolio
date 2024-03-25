@@ -22,6 +22,7 @@
   margin:0 auto;
   justify-content: center;
   margin-bottom: auto;
+  height: 70vh;
   /* set container text to the center of the page */
 }
 
@@ -29,7 +30,7 @@
 .container__text__contact__title {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 10px;
   color: #6C6B6B;
   font-style: normal;
   font-weight: 300;
@@ -112,6 +113,10 @@ align-items: center;
     margin-top: 20px;
   }
 
+  .container__text__contact {
+    justify-content: flex-start;
+  }
+
   .container__text__contact__title{
     font-size: 15px;
     width: 90%;
@@ -157,27 +162,33 @@ width: 90%;
     margin-right: auto;
   }
 
+  .container__text__contact {
+    justify-content: flex-start;
+  }
+
   .container__text__contact__title{
     font-size: 20px;
-    margin-top: 200px;
+    margin-top: 100px;
+    width: 60%;
   }
 
   .container__text__contact__description{
-    width: 100%;
+    width: 60%;
     margin-bottom: 80px;
+    margin-top: 50px;
   }
 
 
   .mailIcon {
     color: var(--white);
-    width: 65.67px;
-    height: 48px;
+    width: 66.67px;
+    height: 49px;
   }
   
   .whatsAppIcon {
     color: var(--white);
-    width: 45.58px;
-    height: 45.83px;
+    width: 50.58px;
+    height: 50.83px;
     margin-right: 35px;
   }
 

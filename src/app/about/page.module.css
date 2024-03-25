@@ -107,9 +107,9 @@ font-family: "Hind Regular";
  }
 
  .container__manifestoButton {
-   margin: 0 auto;
    margin-top: 30px;
- }
+   margin-left: 21px;
+  }
 
  .container__manifestoButton p {
     font-size: 15px;
@@ -121,8 +121,24 @@ font-family: "Hind Regular";
 
 /* Media Query for Tablet */
 @media only screen and (min-width: 768px) and (max-width:1023px) {
+
+  .container__text__about {
+   width: 95%;
+  }
+
+  .container__text__about__description {
+    margin-top: 70px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .container__text__about p {
+    width: 100%;
+    text-align: justify;
+  }
+
   .container__about{
-    margin-top: 60px;
+    margin-top: 30px;
     width: 70%;
     margin-left: 14%;
     margin-right: auto;
@@ -133,10 +149,7 @@ font-family: "Hind Regular";
     margin-top: 200px;
   }
 
-  .container__text__about__description{
-    width: 100%;
-    margin-bottom: 80px;
-  }
+
 
 }
 

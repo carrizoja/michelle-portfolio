@@ -2,33 +2,30 @@
 @tailwind components;
 @tailwind utilities; */
 
-
 /* Importting Helvetica Neue Family Font */
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   border: 0;
   outline: 0;
   list-style: none;
   text-decoration: none;
-  }
-
-:root {
-  --foreground-rgb: #E6E5E4;
-  --background-start-rgb: #E6E5E4;
-  --background-end-rgb: #E6E5E4;
 }
 
-
+:root {
+  --foreground-rgb: #e6e5e4;
+  --background-start-rgb: #e6e5e4;
+  --background-end-rgb: #e6e5e4;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: #E6E5E4;
-    --background-end-rgb: #E6E5E4;
+    --background-start-rgb: #e6e5e4;
+    --background-end-rgb: #e6e5e4;
   }
 }
 
@@ -46,9 +43,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-h1, h2, h3, h4, p, a, small {
-  color: #6C6B6B;
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+small {
+  color: #6c6b6b;
 }
-
-
-

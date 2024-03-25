@@ -7,7 +7,7 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { useState } from "react";
 import app from "../../firebase.js";
 import Link from "next/link";
-import { HashLoader } from "react-spinners";
+import { PuffLoader } from "react-spinners";
 
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
@@ -62,7 +62,7 @@ const Portfolio = () => {
             {loading ? (
               <>
               <div className={styles.container_hashLoader}>
-              <HashLoader color="#6C6B6B"className='spinner' role="status"/>
+              <PuffLoader color="#6C6B6B"className='spinner' role="status"/>
               </div>          
               </>
             ) : (
@@ -91,7 +91,7 @@ const Portfolio = () => {
             {loading ? (
                       <>
                       <div className={styles.container_hashLoader}>
-                      <HashLoader color="#6C6B6B" className='spinner' role="status"/>
+                      <PuffLoader color="#6C6B6B" className='spinner' role="status"/>
                       </div>
                       </>
             ) : (

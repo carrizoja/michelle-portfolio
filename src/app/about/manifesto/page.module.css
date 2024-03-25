@@ -12,10 +12,10 @@
 .container__text__manifesto {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  margin-left: 30%;
   margin-right: auto;
   font-style: normal;
-  width: 500px;
+  width: 60%;
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
@@ -23,18 +23,51 @@
   margin-top: 100px;
   margin-bottom: 70px;
   font-family: "Hind Regular";
-  gap: 20px;
+  gap: 10px;
+  align-items: flex-start;
 
 }
 
-.container__text__manifesto__description {
+.container__text__manifesto p {
   text-align: left;
+}
+
+
+.container__text__manifesto__description1 {
+  width: 70%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Hind Regular";
+  text-align: justify;
+
+}
+
+.container__text__manifesto__description1 p {
+  margin: 0;
+}
+
+.container__text__manifesto__description {
+  text-align: justify;
+}
+
+.container__text__manifesto__paragraph {
+  margin-bottom: 10%;
 }
 
 @media screen and (width < 768px) {
   .container__text__manifesto {
     width: 90%;
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Media queries for Tablet View */
+@media screen and (768px < width < 1025px) {
+  .container__text__manifesto {
+    height: 50vh;
+    margin-top: 30px;
   }
 }
