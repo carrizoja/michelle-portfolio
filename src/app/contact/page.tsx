@@ -27,7 +27,7 @@ const Contact = () => {
           </p>
           <div className={styles.container__text__icons}>
             <motion.a
-              href="https://api.whatsapp.com/send?phone=5491141768429&text=Hola, ¿cómo estás? Tengo una consulta para hacerte."
+              href="https://api.whatsapp.com/send?phone=5491149601488&text=Hola, ¿cómo estás? Tengo una consulta para hacerte."
               target="_blank"
               rel="noreferrer"
               whileHover={{
@@ -38,7 +38,7 @@ const Contact = () => {
               <FaWhatsapp className={styles.whatsAppIcon} />
             </motion.a>
             <motion.a
-              href="mailto:contacto@circularid.com.ar"
+              href="mailto:michelle@mugrabimichelle.com"
               target="_blank"
               rel="noreferrer"
               whileHover={{

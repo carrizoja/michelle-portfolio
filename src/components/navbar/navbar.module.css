@@ -207,11 +207,11 @@ nav .innerNav li a:hover {
   button.toggle {
     display: block;
     right: 2%;
-    top: 165px;
+    top: 100px;
   }
 
   nav .innerNav {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 
   nav .innerNav ul li {

@@ -51,6 +51,12 @@
   margin-bottom: 10px;
 }
 
+.button__service_title {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
 .service_description {
   color: #6C6B6B;
   text-align: justify;
@@ -68,6 +74,16 @@
   margin-right: 5%;
 }
 
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #6C6B6B;
+  border-radius: 50%;
+  position: absolute;
+  left: 263px;
+  top: 332px;
+}
+
 .service__item {
   margin-top: 10%;
   /* margin-bottom: 50px; */
@@ -82,5 +98,13 @@
   .service_title {
     font-size: 17px;
   }
+}
+
+/* Media queries for Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container__listServices {
+    width: 95%;
+  }
+
 }
 

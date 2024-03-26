@@ -40,3 +40,22 @@
         font-size: 15px;
     }
 }
+
+/* Medias queries for Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .container__text__art_collection {
+        width: 90%;
+        height: 53vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .container__text__art_collection p {
+        font-size: 15px;
+    }
+
+}

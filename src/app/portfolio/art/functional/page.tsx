@@ -18,6 +18,7 @@ import jpg10 from "../../../../../public/assets/mosaic/jpg10.jpg";
 import jpg11 from "../../../../../public/assets/mosaic/jpg11.jpg";
 import Link from "next/link";
 import Footer from "@/components/footer/Footer";
+import { FaInstagram } from "react-icons/fa";
 const Functional = () => {
   return (
     <>
@@ -174,7 +175,6 @@ const Functional = () => {
           >
             <img src={jpg6.src} alt="" />
           </div>{" "}
-          *
           <div
             className={[
               styles.item14,
@@ -265,7 +265,7 @@ const Functional = () => {
               styles.overflow_hidden,
             ].join(" ")}
           >
-            <img src={orquideamar.src} alt="sea orchid " />
+            <img src={orquideamar.src} alt="sea orchid "/>
           </div>
         </div>
         <div className={styles.container_socialMedia}>
@@ -273,8 +273,14 @@ const Functional = () => {
             <h2>Want to learn more about my universe?</h2>
             <p>Explore my visual journey on Instagram.</p>
           </div>
-          <Link className={styles.socialMedia_icon} target="_blank" href="https://www.instagram.com/mugrabimichelle/"><img src="https://res.cloudinary.com/dyorbs4xf/image/upload/v1708906542/social%20media/i6cqwf5trcboivleulnd.png" alt="Instagram" /></Link>
-
+          <div className={styles.container_linkIG}>
+      {/*     <Link href="https://www.instagram.com/mugrabimichelle/"
+              target="_blank"
+              rel="noreferrer">
+          <FaInstagram className={styles.instagramIcon} />
+          </Link> */}
+          <FaInstagram className={styles.instagramIcon} />
+          </div>     
         </div>
       </section>
       <Footer />

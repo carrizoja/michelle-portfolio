@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  background-color: #e6e5e4;
+  background-color: transparent;
 }
 
 .containerText {

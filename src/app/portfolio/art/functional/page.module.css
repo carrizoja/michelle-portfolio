@@ -25,7 +25,7 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr(10px, 150px));
+  /* grid-template-columns: repeat(4, 1fr(10px, 150px)); */
   grid-template-rows: repeat(11, minmax(10px, 230px));
   /* add grid template area */
   grid-template-areas:
@@ -302,24 +302,35 @@ object-fit:cover;
   display: flex;
   flex-direction: row;
   gap: 20px;
-  align-items:flex-end;
+  align-items:center;
 }
-
-
 
 .socialMedia_icon:hover {
   opacity: 0.5;
   transition: 0.5s ease-out;
 }
 
-@media screen and (max-width: 768px) {
+.instagramIcon {
+  color: #6C6B6B;
+  width: 48.58px;
+  height: 46.83px;
+  margin-left: 35px;
+}
+
+.instagramIcon:hover {
+  opacity: 0.5;
+  /* set transition */
+  transition: 0.5s ease-out;
+}
+
+@media screen and (max-width: 767px) {
  
   .container__main__containerMosaics {
     width: 90%;
     height: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr(10px, 100px));
+   /*  grid-template-columns: repeat(4, 1fr(10px, 100px)); */
     grid-template-rows: repeat(11, minmax(10px, 80px));
     /* add grid template area */
     grid-template-areas:
@@ -338,20 +349,26 @@ object-fit:cover;
     grid-gap: 3px;
   }
 
+  .container__functional {
+    gap: 20px;
+  }
+
   .container_socialMedia {
     display: flex;
     flex-direction: row;
     width: 90%;
     align-items: flex-start;
     margin: 0 auto;
-    gap: 30%;
+    gap: 10px;
   }
 
+ 
   .container__socialMedia_text {
     display: flex;
     flex-direction: column;
     gap: 1px;
     align-items:flex-start;
+    width: 100%;
   }
 
   .container_socialMedia h2 {
@@ -362,5 +379,53 @@ object-fit:cover;
   .container_socialMedia p {
     font-size: 12px;
     font-family: "Hind Regular";
+  }
+
+  .instagramIcon {
+ 
+    width: 30.58px;
+    height: 30.83px;
+   /*  position:absolute;
+    right: 19%; */
+  }
+
+}
+
+/* Media queries for Tablet View */
+@media screen and (767px < width < 1025px) {
+  .container__main__containerMosaics {
+    width: 95%;
+    margin-top: 10%;
+    height: max-content;
+    /* height: 100%; */
+    /* margin: 0 auto; */
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr(10px, 100px)); */
+    grid-template-rows: repeat(11, minmax(10px, 170px));
+    /* add grid template area */
+    grid-template-areas:
+      "item01 item01 item01 item02"
+      "item01 item01 item01 item02"
+      "item06 item07 item07 item02"
+      "item06 item07 item07 item11"
+      "item09 item07 item07 item11"
+      "item09 item12 item13 item11"
+      "item14 item14 item15 item16"
+      "item17 item18 item19 item20"
+      "item10 item10 item08 item03"
+      "item10 item10 item08 item03"
+      "item10 item10 item05 item03";
+  
+    grid-gap: 3px;
+  }
+
+  .container_socialMedia {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .container__socialMedia_text {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
