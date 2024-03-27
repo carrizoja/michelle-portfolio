@@ -8,6 +8,7 @@ import { useState } from "react";
 import app from "../../firebase.js";
 import Link from "next/link";
 import { PuffLoader } from "react-spinners";
+import { px } from "framer-motion";
 
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,9 @@ const Portfolio = () => {
       setLoading(false);
     }
   });
+
+  /* if screen width is less than 768px */
+  
 
   return (
     <>

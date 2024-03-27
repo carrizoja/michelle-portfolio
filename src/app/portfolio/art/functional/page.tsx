@@ -58,6 +58,7 @@ const Functional = () => {
               muted
               autoPlay
               loop
+              playsInline
             ></video>
           </div>
           <div
@@ -162,6 +163,7 @@ const Functional = () => {
               muted
               autoPlay
               loop
+              playsInline
             ></video>
           </div>
           <div
@@ -189,6 +191,7 @@ const Functional = () => {
               muted
               autoPlay
               loop
+              playsInline
             ></video>
           </div>
           <div
@@ -227,6 +230,7 @@ const Functional = () => {
               muted
               autoPlay
               loop
+              playsInline
             ></video>
           </div>
           <div
@@ -243,6 +247,7 @@ const Functional = () => {
               muted
               autoPlay
               loop
+              playsInline
             ></video>
           </div>
           <div
@@ -274,11 +279,6 @@ const Functional = () => {
             <p>Explore my visual journey on Instagram.</p>
           </div>
           <div className={styles.container_linkIG}>
-      {/*     <Link href="https://www.instagram.com/mugrabimichelle/"
-              target="_blank"
-              rel="noreferrer">
-          <FaInstagram className={styles.instagramIcon} />
-          </Link> */}
           <FaInstagram className={styles.instagramIcon} />
           </div>     
         </div>

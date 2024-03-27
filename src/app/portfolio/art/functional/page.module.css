@@ -1,13 +1,17 @@
 /* Custom fonts */
 @font-face {
   font-family: "Helvetica Bold";
-  src: url("/public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+  font-weight: bold;
+  font-style:normal;
 }
 
 @font-face {
-  font-family: "Hind Regular";
-  src: url("/public/assets/fonts/Hind/Hind-Regular.ttf");
-}
+  font-family: 'Hind Regular';
+  src: url('https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf');
+  font-weight: normal;
+  font-style:normal;
+} 
 
 /* ------------------- CSS for Funtional's Page ----------------------------*/
 
@@ -22,7 +26,8 @@
 .container__main__containerMosaics {
   width: 70%;
   /* max-width: 680px; */
-  height: 100%;
+ /*  height: 100%; */
+  height: max-content;
   margin: 0 auto;
   display: grid;
   /* grid-template-columns: repeat(4, 1fr(10px, 150px)); */
@@ -327,7 +332,8 @@ object-fit:cover;
  
   .container__main__containerMosaics {
     width: 90%;
-    height: 100%;
+   /*  height: 100%; */
+    height: max-content;
     margin: 0 auto;
     display: grid;
    /*  grid-template-columns: repeat(4, 1fr(10px, 100px)); */

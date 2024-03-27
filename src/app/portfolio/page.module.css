@@ -1,13 +1,17 @@
 
 @font-face {
   font-family: "Helvetica Bold";
-  src: url("../../../public/assets/fonts/helveticaBold/Helvetica-Bold-Font.ttf");
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+  font-weight: bold;
+  font-style:normal;
 }
 
 @font-face {
-  font-family: "Hind Regular";
-  src: url("../../../public/assets/fonts/Hind/Hind-Regular.ttf");
-}
+  font-family: 'Hind Regular';
+  src: url('https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf');
+  font-weight: normal;
+  font-style:normal;
+} 
 
 /* ------------------- CSS for Contact's Page ----------------------------*/
 
@@ -125,4 +129,29 @@
   position: absolute;
   top: 30%;
   left: 50%;
+}
+
+
+/* Medias queries for Mobile View */
+ 
+@media screen and (width < 768px) {
+
+  .container__projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .verticalLine {
+    display: none;
+  }
+
+  .project_shortDescription {
+    display: none;
+  }
+
+/*   .container__proyect__description {
+    display: none;
+  } */
 }

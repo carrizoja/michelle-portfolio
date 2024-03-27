@@ -69,10 +69,24 @@
 
 .verticalLine {
   border-left: 3px solid #6C6B6B;
-  /* calculate the height of the container_main  */
+  /* calculate height of his parent container and set it */
   margin-left: 10px;
   margin-right: 5%;
 }
+
+/* .verticalLine::after {
+  content: '';
+position: absolute; */
+/* bottom: 16px;
+right: -6px; */
+/* width: 20px;
+height: 20px;
+border-radius: 50%;
+border: 1px solid #6C6B6B;
+background: #6C6B6B;
+cursor: pointer;
+} */
+
 
 .circle {
   width: 20px;
@@ -83,6 +97,7 @@
   left: 263px;
   top: 332px;
 }
+
 
 .service__item {
   margin-top: 10%;

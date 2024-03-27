@@ -19,17 +19,20 @@ const Services = async () => {
           <h1 className={globalStyles.section__title}>SERVICES</h1>
         </div>
         <div className={styles.container__listServices}>
-        <figure className={styles.circle}></figure>
+          {/* <figure className={styles.verticalLine}></figure> */}
+          {/* <figure className={styles.circle}></figure> */}
           <div>
             {data.map((service: any) => (
-              <div key={service.id} className={styles.container__service}>       
-                <figure className={styles.verticalLine}>
-                </figure>
+              <div key={service.id} className={styles.container__service}>
+                <figure className={styles.verticalLine}></figure>
                 <div className={styles.service__item}>
-                  <button className={styles.button__service_title}> <h2 className={styles.service_title}>
-                    {service.service_title}
-                  </h2></button>
-                 {/*  <h2 className={styles.service_title}>
+                  <button className={styles.button__service_title}>
+                    {" "}
+                    <h2 className={styles.service_title}>
+                      {service.service_title}
+                    </h2>
+                  </button>
+                  {/*  <h2 className={styles.service_title}>
                     {service.service_title}
                   </h2> */}
                   <p className={styles.service_description}>
