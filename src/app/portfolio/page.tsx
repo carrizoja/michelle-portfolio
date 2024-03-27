@@ -4,7 +4,7 @@ import styles from "@/app/portfolio/page.module.css";
 import globalStyles from "@/app/page.module.css";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import app from "../../firebase.js";
 import Link from "next/link";
 import { PuffLoader } from "react-spinners";
@@ -23,34 +23,44 @@ const Portfolio = () => {
       img1: string;
     }[]
   >([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  const db = getFirestore(app);
-  const itemsCollection = collection(db, "projects");
-  getDocs(itemsCollection).then((querySnapshot) => {
-    if (querySnapshot.empty) {
-      console.log("There are no projects");
-    } else {
-      setProjects(
-        querySnapshot.docs.map(
-          (doc) =>
-            ({ id: doc.id, ...doc.data() } as {
-              id: string;
-              title: string;
-              services: string;
-              shortDescription: string;
-              longDescription: string;
-              mainImage: string;
-              img1: string;
-            })
-        )
-      );
-      setLoading(false);
+  useEffect(() =>{
+    const fetchData = async () => {
+      try {
+        if (!isLoaded) {
+          const db = getFirestore(app);
+          const itemsCollection = collection(db, "projects");
+          const querySnapshot = await getDocs(itemsCollection);
+          if (querySnapshot.empty) {
+            console.log("There are no projects");
+          } else {
+            setProjects(
+              querySnapshot.docs.map(
+                (doc) =>
+                  ({ id: doc.id, ...doc.data() } as {
+                    id: string;
+                    title: string;
+                    services: string;
+                    shortDescription: string;
+                    longDescription: string;
+                    mainImage: string;
+                    img1: string;
+                  })
+              )
+            );
+            setLoading(false);
+            setIsLoaded(true);
+          }
+        }
+      } catch (error) {
+        console.error("Error getting documents: ", error);
+
+      }
     }
-  });
-
-  /* if screen width is less than 768px */
+    fetchData();
+  }, [isLoaded])
   
-
   return (
     <>
       <WhatsAppBtn />
@@ -139,3 +149,5 @@ const Portfolio = () => {
   );
 };
 export default Portfolio;
+
+
