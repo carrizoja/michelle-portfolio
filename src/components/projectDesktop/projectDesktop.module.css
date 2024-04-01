@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Helvetica Bold";
+    src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Hind Regular";
+    src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* ------------------- CSS for Project Component ----------------------------*/
+  
+  .project {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .project_services {
+      font-family: "Hind Regular";
+      font-size: 17px;
+      text-align: center;
+    }
+  
+    .project__description{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      width: 95%;
+      gap: 40px;
+      margin-bottom: 10%;
+    }
+  
+    .project_mainImage {
+      width: 100%;
+      object-fit: fill;
+      border-radius: 3px;
+    }
+  
+    .project_text_container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  
+    .project_main_title {
+      font-family: "Helvetica Bold";
+      font-size: 15px;
+      text-align: center;
+    
+    }
+  
+    .project_title {
+      font-family: "Helvetica Bold";
+      font-size: 15px;
+      text-align: center;
+      min-width: 120px;
+    }
+  
+    .project_longDescription {
+      font-family: "Hind Regular";
+      font-size: 17px;
+      text-align:justify;
+      margin-left: 10px;
+    
+    }
+    
+    .proyect_img1 {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 3px;
+      overflow: hidden;
+    }

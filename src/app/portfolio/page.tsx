@@ -2,16 +2,18 @@
 import React from "react";
 import styles from "@/app/portfolio/page.module.css";
 import globalStyles from "@/app/page.module.css";
+import Project from "@/components/project/Project";
+import ProjectDesktop from "@/components/projectDesktop/ProjectDesktop";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import app from "../../firebase.js";
-import Link from "next/link";
 import { PuffLoader } from "react-spinners";
-import { px } from "framer-motion";
+import Footer from "@/components/footer/Footer";
 
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
+
   const [projects, setProjects] = useState<
     {
       id: string;
@@ -21,11 +23,12 @@ const Portfolio = () => {
       longDescription: string;
       mainImage: string;
       img1: string;
+      isDefault: boolean;
     }[]
   >([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() =>{
+  useEffect(() => {
     const fetchData = async () => {
       try {
         if (!isLoaded) {
@@ -46,6 +49,7 @@ const Portfolio = () => {
                     longDescription: string;
                     mainImage: string;
                     img1: string;
+                    isDefault: boolean;
                   })
               )
             );
@@ -55,99 +59,168 @@ const Portfolio = () => {
         }
       } catch (error) {
         console.error("Error getting documents: ", error);
-
       }
-    }
+    };
     fetchData();
-  }, [isLoaded])
-  
-  return (
-    <>
-      <WhatsAppBtn />
-      {/* Main Container start */}
-      <section className={globalStyles.container__main}>
-        <div className={globalStyles.container__main__title}>
-          <h1 className={globalStyles.section__title}>PORTFOLIO</h1>
-        </div>
-        {/* Container projects start */}
-        <div className={styles.container__projects}>
-          {/* Container list projects start */}
-          <div className={styles.container__listProjects}>
-            {loading ? (
-              <>
-              <div className={styles.container_hashLoader}>
-              <PuffLoader color="#6C6B6B"className='spinner' role="status"/>
-              </div>          
-              </>
-            ) : (
-              projects.map((project) => (
-                <div key={project.id} className={styles.project}>
-                  <Link
-                    href={`/portfolio#${project.longDescription}`}
-                   >
-                  <h2 className={styles.project_title}>{project.title}</h2>
-                  <h3 className={styles.project_services}>
-                    {project.services}
-                  </h3>
-                  </Link>
-             
-                  <p className={styles.project_shortDescription}>
-                    {project.shortDescription}
-                  </p>
-                </div>
-              ))
-            )}
-          </div>
-          {/* vertical line */}
-          <figure className={styles.verticalLine}></figure>
-          {/* container projects description start */}
-          <div className={styles.container__projects__description}>
-            {loading ? (
-                      <>
-                      <div className={styles.container_hashLoader}>
-                      <PuffLoader color="#6C6B6B" className='spinner' role="status"/>
-                      </div>
-                      </>
-            ) : (
-              projects.map((project) => (
-                <>
-                  <div className={styles.container__proyect__description}>
-                    <figure className={styles.verticalLine}></figure>
-                    <div
-                      key={project.id}
-                      className={styles.project__description}
-                      id={project.longDescription}
-                    >
-                      <img
-                        className={styles.project_mainImage}
-                        src={project.mainImage}
-                        alt={project.title}
-                      />
-                      <div className={styles.project_text_container}>
-                        <h2 className={styles.project_main_title}>CLIENT</h2>
-                        <h3 className={styles.project_title}>
-                          {project.title}
-                        </h3>
-                        <p className={styles.project_longDescription}>
-                          {project.longDescription}
-                        </p>
-                      </div>
-                      <img
-                        className={styles.proyect_img1}
-                        src={project.img1}
-                        alt={project.title}
+  }, [isLoaded]);
+  /* if screen width < 768 */
+  if (typeof window !== "undefined") {
+    if (window.innerWidth < 768) {
+      return (
+        <>
+          <WhatsAppBtn />
+          <section className={globalStyles.container__main}>
+            <div className={globalStyles.container__main__title}>
+              <h1 className={globalStyles.section__title}>PORTFOLIO</h1>
+            </div>
+            <div className={styles.container__projects}>
+              <figure className={styles.verticalLine}></figure>
+              <div className={styles.container__projects__description}>
+                {loading ? (
+                  <>
+                    <div className={styles.container_hashLoader}>
+                      <PuffLoader
+                        color="#6C6B6B"
+                        className="spinner"
+                        role="status"
                       />
                     </div>
-                  </div>
-                </>
-              ))
-            )}
+                  </>
+                ) : (
+                  projects.map((project) => (
+                    <>
+                      <div className={styles.container__proyect__description}>
+                        <Project
+                          id={project.id}
+                          title={project.title}
+                          services={project.services}
+                          shortDescription={project.shortDescription}
+                          mainImage={project.mainImage}
+                          longDescription={project.longDescription}
+                          img1={project.img1}
+                        ></Project>
+                      </div>
+                    </>
+                  ))
+                )}
+              </div>
+            </div>
+          </section>
+          <div className={styles.footer}>
+            <Footer></Footer>
           </div>
-        </div>
-      </section>
-    </>
-  );
+        </>
+      );
+    } else {
+      const enableDivById = (id: string) => {
+        
+        // Create a new array with the updated project
+        const updatedProjects = projects.map((project) => {
+          if (project.id === id) {
+            // This is the project we want to update, return a new object with the updated values
+            return {
+              ...project, // copy all the existing properties
+              isDefault: true, // update the value of isDefault
+              // add any other properties you want to update here
+              
+            };
+              
+          } else {
+            // This is not the project we want to update, return it as is
+            return {
+              ...project,
+              isDefault: false, // rest of the project will be false
+            };
+          }
+        });
+        // Update the state with the new array
+        setProjects(updatedProjects);
+        
+
+      };
+
+      return (
+        <>
+          <WhatsAppBtn />
+          {/* Main Container start */}
+          <section className={globalStyles.container__main}>
+            <div className={globalStyles.container__main__title}>
+              <h1 className={globalStyles.section__title}>PORTFOLIO</h1>
+            </div>
+            {/* Container projects start */}
+            <div className={styles.container__projects}>
+              {/* Container list projects start */}
+              <div className={styles.container__listProjects}>
+                {loading ? (
+                  <>
+                    <div className={styles.container_hashLoader}>
+                      <PuffLoader
+                        color="#6C6B6B"
+                        className="spinner"
+                        role="status"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  projects.map((project) => (
+                    <div key={project.id} className={styles.project}>
+                      <button
+                        onClick={() => enableDivById(project.id)}
+                        className={styles.project_button}
+                      >
+                        <h2 className={styles.project_title}>
+                          {project.title}
+                        </h2>
+                        <h3 className={styles.project_services}>
+                          {project.services}
+                        </h3>
+                      </button>
+                      <p className={styles.project_shortDescription}>
+                        {project.shortDescription}
+                      </p>
+                    </div>
+                  ))
+                )}
+              </div>
+              {/* vertical line */}
+              <figure className={styles.verticalLine}></figure>
+              {/* container projects description start */}
+              <div className={styles.container__projects__description}>
+                {loading ? (
+                  <>
+                    <div className={styles.container_hashLoader}>
+                      <PuffLoader
+                        color="#6C6B6B"
+                        className="spinner"
+                        role="status"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  projects.map((project) => (
+                    <>
+                      {project.isDefault === true && (
+                        <div className={styles.container__proyect__description}>
+                          <ProjectDesktop
+                            id={project.id}
+                            title={project.title}
+                            mainImage={project.mainImage}
+                            longDescription={project.longDescription}
+                            img1={project.img1}
+                          ></ProjectDesktop>
+                        </div>
+                      )}
+                    </>
+                  ))
+                )}
+              </div>
+            </div>
+          </section>
+          <Footer></Footer>
+        </>
+      );
+    }
+  }
 };
+
 export default Portfolio;
-
-

@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/helveticaBold/psshigai8vqp253vimqf.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hind Regular";
+  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------- CSS for Project Component ----------------------------*/
+
+
+
+/* Medias queries for Mobile View */
+
+@media screen and (width < 768px) {
+  .project {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 95%;
+  } 
+
+  .project_button {
+    background-color: transparent;
+  }
+
+  .project_main_title_mobile {
+    font-family: "Helvetica Bold";
+    font-size: 17px;
+    text-align:left;
+    opacity: 0.5;
+    width: 150px;
+  }
+
+  .project_services {
+    font-size: 11px;
+    opacity: 0.5;
+    text-align: left;
+  }
+
+  .project_shortDescription {
+    display: none;
+  }
+
+  .project_main_title {
+    display: none;
+  }
+
+  .project_title {
+    display: none;
+  }
+
+  .project__description{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    gap:20px;
+  }
+
+  .project_longDescription {
+    font-family: "Hind Regular";
+    font-size: 17px;
+  }
+
+ 
+}

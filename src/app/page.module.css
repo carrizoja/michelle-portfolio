@@ -6,9 +6,11 @@
 }
 
 @font-face {
-  font-family: "Hind Regular";
-  src: url("https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822309/fonts/Hind/j30z1c9whbj0btnj2glf.txt");
-}
+  font-family: 'Hind Regular';
+  src: url('https://res.cloudinary.com/dyorbs4xf/raw/upload/v1708822308/fonts/Hind/q2txkwkwp1nbyqzjraa9.ttf');
+  font-weight: normal;
+  font-style:normal;
+} 
 
 .mainBackground {
   background-image: url(../../public/assets/home/Cropeada\ desktop\ 2000x1400.jpg);

@@ -53,3 +53,47 @@ a,
 small {
   color: #6c6b6b;
 }
+
+.disabled {
+  display: none !important;
+  /* add smooth effect transition exit with keyframes */
+  /* transition: all 1.5s ease; */
+  /* animation: exit 2s ease-in-out; */
+  animation: exit 2s ease-out forwards;
+  opacity: 0; /* Becomes transparent */
+}
+
+@keyframes exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.enabled {
+  display: flex !important;
+  /* add smooth effect transition appearance */
+  transition: all 0.5s ease;
+  animation: entrance 1s ease-in-out;
+}
+
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+
