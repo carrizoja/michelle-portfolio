@@ -279,7 +279,9 @@ const Functional = () => {
             <p>Explore my visual journey on Instagram.</p>
           </div>
           <div className={styles.container_linkIG}>
+          <Link href="https://www.instagram.com/mugrabimichelle/" target="_blank" rel="noreferrer">
           <FaInstagram className={styles.instagramIcon} />
+          </Link>
           </div>     
         </div>
       </section>

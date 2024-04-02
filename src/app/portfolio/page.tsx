@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import app from "../../firebase.js";
 import { PuffLoader } from "react-spinners";
 import Footer from "@/components/footer/Footer";
-import selectedProjectTile from '../../components/project/Project';
+
 
 
 const Portfolio = () => {
@@ -79,7 +79,7 @@ const Portfolio = () => {
               <figure className={styles.verticalLine}>
               <figure
                  className={styles.pointer}
-                 style={{top: selectedProjectTitle ? `${selectedProjectTitle}px` : 248 }}
+                 style={{top: selectedProjectTitle ? `${selectedProjectTitle}px` : 252 }}
                  ></figure>
               </figure>
               <div className={styles.container__projects__description}>
@@ -105,8 +105,8 @@ const Portfolio = () => {
                           mainImage={project.mainImage}
                           longDescription={project.longDescription}
                           img1={project.img1}
-                          setSelectedProjectTitle = {setSelectedProjectTitle}
-                          selectedProjectTitle = {selectedProjectTile}                    
+                          selectedProjectTitle={selectedProjectTitle}
+                          setSelectedProjectTitle={setSelectedProjectTitle}              
                         ></Project>
                       </div>
                     </>
@@ -154,13 +154,7 @@ const Portfolio = () => {
         });
         // Update the state with the new array
         setProjects(updatedProjects);
-        
-        
-      
-        
       };
-
-
       return (
         <>
           <WhatsAppBtn />
@@ -208,7 +202,7 @@ const Portfolio = () => {
               <figure className={styles.verticalLine}>
                 <figure
                  className={styles.pointer}
-                 style={{top: selectedProjectTitle ? `${selectedProjectTitle}px` : 285 }}
+                 style={{top: selectedProjectTitle ? `${selectedProjectTitle}px` : 260 }}
                  ></figure>
               </figure>
               {/* container projects description start */}

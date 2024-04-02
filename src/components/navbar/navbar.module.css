@@ -24,7 +24,7 @@
 
 .innerNav {
   position: absolute;
-  top: 10rem;
+  top: 8rem;
   bottom: 0;
   width: 100%;
   text-align: end;
@@ -61,8 +61,15 @@ button.toggle:hover {
 }
 
 .homeTitle {
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Helvetica Bold";
+}
+
+.linkHome {
+ 
+    font-size: 30px;
+    font-family: "Helvetica Bold";
+  
 }
 
 nav .innerNav ul {
@@ -77,8 +84,8 @@ nav .innerNav ul {
 nav .innerNav ul li {
   list-style: none;
   cursor: pointer;
-  line-height: 1.8;
-  padding-right: 150px;
+  line-height: 1.6;
+  padding-right: 120px;
 }
 
 nav .innerNav li a {
@@ -96,7 +103,7 @@ nav .innerNav li a:hover {
 }
 
 .linkTitles {
-  font-size: 70px;
+  font-size: 50px;
   font-family: "Helvetica Bold";
 }
 

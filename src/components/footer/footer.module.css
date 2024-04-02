@@ -21,6 +21,18 @@
   justify-content: flex-end;
   margin-right: 10%;
   margin-bottom: 20px;
+  opacity: 0;
+  animation: appears 1s ease 1.5s forwards; /* Activate the keyframe */
+}
+
+/* Add a keyframe to activate the pointer display after 5 seconds */
+@keyframes appears {
+0% {
+  opacity: 0;
+}
+100% {
+ opacity: 1;
+}
 }
 
 .textAllRightsReserved {

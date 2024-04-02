@@ -27,7 +27,7 @@ const Contact = () => {
           </p>
           <div className={styles.container__text__icons}>
             <motion.a
-              href="https://api.whatsapp.com/send?phone=5491149601488&text=Hola, ¿cómo estás? Tengo una consulta para hacerte."
+              href="https://api.whatsapp.com/send?phone=5491149601488&text=Hola, me gustaría tener más información. Gracias."
               target="_blank"
               rel="noreferrer"
               whileHover={{

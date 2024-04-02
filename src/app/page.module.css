@@ -38,7 +38,7 @@
 }
 
 .container__main__title {
-  margin-left: 120px;
+  margin-left: 30px;
   margin-right: auto;
   margin-top: 150px;
 }
@@ -75,6 +75,10 @@
 
   .container__main {
     width: 100%;
+  }
+
+  .footer p  {
+    color: #F4F4F4;
   }
 }
 

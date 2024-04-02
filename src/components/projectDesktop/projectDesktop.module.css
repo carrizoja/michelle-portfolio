@@ -15,7 +15,7 @@
   /* ------------------- CSS for Project Component ----------------------------*/
   
   .project {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

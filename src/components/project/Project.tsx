@@ -2,31 +2,31 @@ import { useState } from 'react';
 import styles from './project.module.css';
 
 
+export const circleResult: any | null = null;
 
-const Project = ({ id, title, services, shortDescription, mainImage, longDescription, img1, setSelectedProjectTitle, selectedProjectTitle }: { id: string, title: string, services: string, shortDescription:string, mainImage:string, longDescription:string, img1:string, setSelectedProjectTitle: any, selectedProjectTitle: any
+const Project = ({ id, title, services, shortDescription, mainImage, longDescription, img1, selectedProjectTitle, setSelectedProjectTitle}: { id: string, title: string, services: string, shortDescription:string, mainImage:string, longDescription:string, img1:string, selectedProjectTitle: any | null, setSelectedProjectTitle: any | null
 }) => {
 
-  const [select, setSelect] = useState(selectedProjectTitle)
-  console.log(select);
   const [isDivEnabled, setIsDivEnabled] = useState(true);
+  /* const [topCircleResult, setTopCircleResult] = useState<any | null>(null); */
 
- 
   const handleButtonClick = ( event: { currentTarget: any; } | undefined) => {
+
     setIsDivEnabled(!isDivEnabled);
      // Set the selected project title 
      if (event) {
       const titleElement = event.currentTarget;
-      console.log(titleElement);
       const cardElement = titleElement.parentNode;
-      console.log(cardElement);
       const cardTop = cardElement.offsetTop;
       console.log(cardTop);
       const titleHeight = titleElement.offsetHeight;
       console.log(titleHeight);
-      const circleTop = cardTop + (titleHeight / 2) - 34;
-      console.log(circleTop);
-      setSelect(circleTop);
-    }
+      const circleResult = cardTop + (titleHeight / 2) - 10;
+      console.log(circleResult);
+      setSelectedProjectTitle(circleResult);
+      console.log(selectedProjectTitle);
+    };
+    
   };
 
   return (
@@ -78,6 +78,10 @@ const Project = ({ id, title, services, shortDescription, mainImage, longDescrip
   </div>
 
   );
+
+ 
 };
+
+
 
 export default Project;
