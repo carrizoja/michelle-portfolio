@@ -10,6 +10,8 @@ import { useState, useEffect } from "react";
 import app from "../../firebase.js";
 import { PuffLoader } from "react-spinners";
 import Footer from "@/components/footer/Footer";
+import selectedProjectTile from '../../components/project/Project';
+
 
 const Portfolio = () => {
   const [loading, setLoading] = useState(true);
@@ -27,7 +29,7 @@ const Portfolio = () => {
     }[]
   >([]);
   const [isLoaded, setIsLoaded] = useState(false);
-
+  const [selectedProjectTitle, setSelectedProjectTitle] = useState<any | null>(null); // State to keep track of selected project title
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -74,7 +76,12 @@ const Portfolio = () => {
               <h1 className={globalStyles.section__title}>PORTFOLIO</h1>
             </div>
             <div className={styles.container__projects}>
-              <figure className={styles.verticalLine}></figure>
+              <figure className={styles.verticalLine}>
+              <figure
+                 className={styles.pointer}
+                 style={{top: selectedProjectTitle ? `${selectedProjectTitle}px` : 248 }}
+                 ></figure>
+              </figure>
               <div className={styles.container__projects__description}>
                 {loading ? (
                   <>
@@ -98,6 +105,8 @@ const Portfolio = () => {
                           mainImage={project.mainImage}
                           longDescription={project.longDescription}
                           img1={project.img1}
+                          setSelectedProjectTitle = {setSelectedProjectTitle}
+                          selectedProjectTitle = {selectedProjectTile}                    
                         ></Project>
                       </div>
                     </>
@@ -112,7 +121,17 @@ const Portfolio = () => {
         </>
       );
     } else {
-      const enableDivById = (id: string) => {
+     
+      const enableDivById = (id: string, event: { currentTarget: any; } | undefined) => {
+        // Set the selected project title 
+        if (event) {
+          const titleElement = event.currentTarget;
+          const cardElement = titleElement.parentNode;
+          const cardTop = cardElement.offsetTop;
+          const titleHeight = titleElement.offsetHeight;
+          const circleTop = cardTop + (titleHeight / 2) - 34;
+          setSelectedProjectTitle(circleTop);
+        }
         
         // Create a new array with the updated project
         const updatedProjects = projects.map((project) => {
@@ -136,8 +155,11 @@ const Portfolio = () => {
         // Update the state with the new array
         setProjects(updatedProjects);
         
-
+        
+      
+        
       };
+
 
       return (
         <>
@@ -165,7 +187,7 @@ const Portfolio = () => {
                   projects.map((project) => (
                     <div key={project.id} className={styles.project}>
                       <button
-                        onClick={() => enableDivById(project.id)}
+                        onClick={(event) => enableDivById(project.id, event)}
                         className={styles.project_button}
                       >
                         <h2 className={styles.project_title}>
@@ -183,7 +205,12 @@ const Portfolio = () => {
                 )}
               </div>
               {/* vertical line */}
-              <figure className={styles.verticalLine}></figure>
+              <figure className={styles.verticalLine}>
+                <figure
+                 className={styles.pointer}
+                 style={{top: selectedProjectTitle ? `${selectedProjectTitle}px` : 285 }}
+                 ></figure>
+              </figure>
               {/* container projects description start */}
               <div className={styles.container__projects__description}>
                 {loading ? (
