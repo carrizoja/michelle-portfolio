@@ -52,7 +52,9 @@
       flex-direction: row;
       align-items: flex-start;
       gap: 20px;
+      justify-content: flex-start;
     }
+
   
     .project_main_title {
       font-family: "Helvetica Bold";
@@ -73,7 +75,7 @@
       font-size: 17px;
       text-align:justify;
       margin-left: 10px;
-    
+      line-height: 1.2;
     }
     
     .proyect_img1 {
