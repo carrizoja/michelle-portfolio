@@ -22,7 +22,7 @@
   margin:0 auto;
   justify-content: center;
   margin-bottom: auto;
-  height: 70vh;
+  height: 50vh;
   /* set container text to the center of the page */
 }
 
@@ -52,7 +52,7 @@ font-size: 17px;
 line-height: 20px;
 text-align: justify;
 margin-top: 100px;
-margin-bottom: 70px;
+margin-bottom: 40px;
 font-family: "Hind Regular";
 }
 /* Css for Contacto's Icons */
