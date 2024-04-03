@@ -5,7 +5,7 @@ import globalStyles from "@/app/page.module.css";
 import Project from "@/components/project/Project";
 import ProjectDesktop from "@/components/projectDesktop/ProjectDesktop";
 import WhatsAppBtn from "@/components/whatsAppBtn/WhatsAppBtn";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, orderBy, query} from "firebase/firestore";
 import { useState, useEffect } from "react";
 import app from "../../firebase.js";
 import { PuffLoader } from "react-spinners";
@@ -35,8 +35,10 @@ const Portfolio = () => {
       try {
         if (!isLoaded) {
           const db = getFirestore(app);
-          const itemsCollection = collection(db, "projects");
-          const querySnapshot = await getDocs(itemsCollection);
+          const itemsCollection = collection(db, "projects"); 
+          const itemsQuery = query(itemsCollection, orderBy("services", "desc"));   
+          console.log("itemsQuery", itemsQuery);     
+          const querySnapshot = await getDocs(itemsQuery);
           if (querySnapshot.empty) {
             console.log("There are no projects");
           } else {
